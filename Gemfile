@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+# Provides React through Webpacker
+gem 'webpacker', '~> 3.5'
 # Provides an easy-to-use interface for managing your data as Admin.
 gem 'rails_admin', '~> 1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
