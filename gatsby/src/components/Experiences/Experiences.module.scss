@@ -1,0 +1,17 @@
+$dot-diameter: 0.5rem;
+$border-width: 0.25rem;
+
+.entry {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: $dot-diameter;
+    height: $dot-diameter;
+    border: $border-width solid salmon;
+    border-radius: 100%;
+    top: $dot-diameter * 2.5;
+    right: 0;
+    z-index: 99;
+  }
+}

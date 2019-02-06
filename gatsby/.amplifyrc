@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "gatsby-20190202221722-authRole",
+            "UnauthRoleArn": "arn:aws:iam::582681190330:role/gatsby-20190202221722-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::582681190330:role/gatsby-20190202221722-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "gatsby-20190202221722-deployment",
+            "UnauthRoleName": "gatsby-20190202221722-unauthRole",
+            "StackName": "gatsby-20190202221722",
+            "StackId": "arn:aws:cloudformation:us-east-1:582681190330:stack/gatsby-20190202221722/38b75cd0-2762-11e9-9541-0ec3f5318aae"
+        }
+    }
+}

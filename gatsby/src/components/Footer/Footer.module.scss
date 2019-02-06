@@ -1,0 +1,12 @@
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.socialBar {
+  margin-top: 1rem;
+
+  a:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
