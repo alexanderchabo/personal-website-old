@@ -3,6 +3,7 @@ import * as React from 'react';
 import Headroom from 'react-headroom';
 
 import * as styles from './Header.module.scss';
+import HeroBanner from '../HeroBanner/HeroBanner';
 
 interface MenuLink {
   name: string;
@@ -15,24 +16,30 @@ interface HeaderProps {
 }
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle = '', menuLinks }) => (
-  <Headroom>
-    <header className={styles.header}>
+  <header>
+    <Headroom
+      style={{
+        zIndex: 10
+      }}
+    >
       <div className={styles.headerContainer}>
-        <h1 className={styles.h1}>
-          <Link to='/'>{'AC'}</Link>
-        </h1>
-        <nav className={styles.nav}>
-          <ul>
-            {menuLinks.map(link => (
-              <li key={link.name} style={{ listStyleType: 'none' }}>
-                <Link to={link.link}>{link.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={styles.header}>
+          <h1 className={styles.h1}>
+            <Link to='/'>{'AC'}</Link>
+          </h1>
+          <nav className={styles.nav}>
+            <ul>
+              {menuLinks.map(link => (
+                <li key={link.name}>
+                  <Link to={link.link}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       </div>
-    </header>
-  </Headroom>
+    </Headroom>
+  </header>
 );
 
 export default Header;

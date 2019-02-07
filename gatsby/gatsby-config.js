@@ -47,7 +47,7 @@ module.exports = {
     // },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-page-transitions`,
+    `gatsby-v2-plugin-page-transitions`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

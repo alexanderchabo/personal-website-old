@@ -10,11 +10,6 @@ const Contact = () => (
     <SEO title='Contact' />
     <h1>Contact</h1>
     <p>Welcome to page 2</p>
-    <Icon icon='github' />
-    <Icon icon='linkedin' />
-    <Icon icon='messenger' />
-    <Icon icon='instagram' />
-    <Icon icon='skype' />
   </Layout>
 );
 

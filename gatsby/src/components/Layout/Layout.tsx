@@ -6,9 +6,11 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 import * as styles from './Layout.module.scss';
+import HeroBanner from '../HeroBanner/HeroBanner';
 
 interface LayoutProps {
   children: any;
+  displayHeroBanner?: boolean;
 }
 
 interface MenuLink {
@@ -36,21 +38,31 @@ const layoutQuery = graphql`
           name
           link
         }
-        social {
-          github
-          linkedin
-        }
       }
     }
   }
 `;
 
-const Layout: React.SFC<LayoutPropsWithData> = ({ children, data }) => (
+const Layout: React.SFC<LayoutPropsWithData> = ({
+  children,
+  data,
+  displayHeroBanner = false
+}) => (
   <PageTransition>
     <Header
       siteTitle={data.site.siteMetadata.title}
       menuLinks={data.site.siteMetadata.menuLinks}
     />
+    {displayHeroBanner && (
+      <HeroBanner
+        body={
+          <div className={styles.heroBannerBody}>
+            <h1>Hi, I'm Alexander Chabo.</h1>
+            <p>a Software Engineer.</p>
+          </div>
+        }
+      />
+    )}
     <div className={styles.mainContainer}>
       <main>{children}</main>
       <Footer />

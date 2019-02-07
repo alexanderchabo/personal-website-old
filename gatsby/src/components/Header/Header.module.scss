@@ -1,8 +1,9 @@
-.header {
+.headerContainer {
   background-color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.headerContainer {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,14 +11,6 @@
   max-width: 960px;
   padding: 1rem;
   margin: 0 auto;
-
-  a {
-    color: black;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
 }
 
 .h1 {
@@ -26,20 +19,25 @@
   padding-left: 0.2rem;
   position: relative;
 
+  a {
+    color: black;
+  }
+
   :after {
     content: '';
     width: 3rem;
     height: 3rem;
-    border: solid 2px;
+    border: solid 0.075rem;
     position: absolute;
     left: 0;
     top: -8px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
 
-  :hover:after {
-    transform: rotate(90deg) scale(1.2);
-    // box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+  @media (min-width: 770px) {
+    :hover:after {
+      transform: rotate(90deg) scale(1.2);
+    }
   }
 }
 
@@ -50,10 +48,10 @@
 
   li {
     display: inline;
-    padding-right: 1rem;
+    list-style-type: none;
 
-    &:last-child {
-      padding-right: 0;
+    &:not(:last-child) {
+      padding-right: 1rem;
     }
   }
 }
