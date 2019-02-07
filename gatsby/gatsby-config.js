@@ -28,15 +28,15 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-v2-plugin-page-transitions`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images/`
-      }
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/assets/images/`
+    //   }
+    // },
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
