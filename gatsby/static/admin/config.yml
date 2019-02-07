@@ -1,54 +1,55 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
+  repo: alexanderchabo/alexanderchabo
 
-media_folder: static/assets
+media_folder: gatsby/static/assets
 public_folder: assets
 
 collections:
   - name: work
-    title: Work
     label: Work
-    folder: "src/pages/work"
+    folder: 'gatsby/src/pages/work/'
     create: true
+    identifier_field: position
     fields:
-      - { name: company, label: Company }
       - { name: position, label: Position }
+      - { name: company, label: Company }
       - { name: location, label: Location }
-      -   name: startDate
-          label: Date started
-          widget: "object"
-          fields: 
+      - { name: summary, label: Summary, widget: markdown }
+      - { name: website, label: Website, required: false }
+      - { name: logo, label: Logo, widget: 'image', required: false }
+      - { name: highlights, label: Highlights, widget: 'list', required: false }
+      - name: startDate
+        label: Date started
+        widget: 'object'
+        fields:
           - name: startMonth
             label: Month
-            widget: "number"
-            valueType: "int"
+            widget: 'number'
+            valueType: 'int'
             min: 1
-            max: 12 
+            max: 12
           - name: startYear
             label: Year
-            widget: "number"
-            valueType: "int"
+            widget: 'number'
+            valueType: 'int'
             min: 1942
-            max: 2030 
-      -   name: endDate
-          label: Date Ended
-          required: false
-          widget: "object"
-          fields: 
+            max: 2050
+      - name: endDate
+        label: Date Ended
+        required: false
+        widget: 'object'
+        fields:
           - name: endMonth
             label: Month
-            widget: "number"
-            valueType: "int"
+            widget: 'number'
+            valueType: 'int'
             min: 1
-            max: 12 
+            max: 12
           - name: endYear
             label: Year
-            widget: "number"
-            valueType: "int"
+            widget: 'number'
+            valueType: 'int'
             min: 1942
-            max: 2030 
-      - { name: summary, label: Summary, , widget: markdown }
-      - { name: website, label: Website, required: false }
-      - { name: logo, label: Logo, widget: "image", required: false }
-      - { name: highlights, label: Highlights, widget: "list", required: false }
+            max: 2050
