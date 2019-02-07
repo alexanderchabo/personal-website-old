@@ -34,8 +34,9 @@ const Footer: React.SFC<FooterProps> = ({ data }) => (
   <footer className={styles.footer}>
     Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>,{' '}
     <a href='https://reactjs.org/'>React</a> and ❤️. Hosted on{' '}
-    <a href='https://aws-amplify.github.io/'>AWS</a>. The code is open source
-    and available at <a href=''>Github</a>.
+    <a href='https://www.netlify.com/'>Netlify</a>. The code is open source
+    and available at{' '}
+    <a href='https://github.com/alexanderchabo/alexanderchabo'>Github</a>.
     <div className={styles.socialBar}>
       {Object.values(data.site.siteMetadata.social).map(key => (
         <SocialIcon url={key} style={{ height: 24, width: 24 }} />
