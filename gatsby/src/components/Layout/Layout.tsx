@@ -1,6 +1,6 @@
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
-import PageTransition from 'gatsby-plugin-page-transitions';
+import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
