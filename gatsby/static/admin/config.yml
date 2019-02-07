@@ -1,15 +1,15 @@
 backend:
-  name: github
+  name: git-gateway
   branch: master
-  repo: alexanderchabo/alexanderchabo
 
 media_folder: static/assets
 public_folder: assets
 
 collections:
   - name: work
+    title: Work
     label: Work
-    folder: work
+    folder: "src/pages/work"
     create: true
     fields:
       - { name: company, label: Company }
@@ -17,15 +17,15 @@ collections:
       - { name: location, label: Location }
       -   name: startDate
           label: Date started
-          widget: object
+          widget: "object"
           fields: 
-          - name: month
+          - name: startMonth
             label: Month
             widget: "number"
             valueType: "int"
             min: 1
             max: 12 
-          - name: year
+          - name: startYear
             label: Year
             widget: "number"
             valueType: "int"
@@ -34,15 +34,15 @@ collections:
       -   name: endDate
           label: Date Ended
           required: false
-          widget: object
+          widget: "object"
           fields: 
-          - name: month
+          - name: endMonth
             label: Month
             widget: "number"
             valueType: "int"
             min: 1
             max: 12 
-          - name: year
+          - name: endYear
             label: Year
             widget: "number"
             valueType: "int"
