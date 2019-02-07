@@ -1,0 +1,54 @@
+backend:
+  name: github
+  branch: master
+  repo: alexanderchabo/alexanderchabo
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: work
+    label: Work
+    folder: work
+    create: true
+    fields:
+      - { name: company, label: Company }
+      - { name: position, label: Position }
+      - { name: location, label: Location }
+      -   name: startDate
+          label: Date started
+          widget: object
+          fields: 
+          - name: month
+            label: Month
+            widget: "number"
+            valueType: "int"
+            min: 1
+            max: 12 
+          - name: year
+            label: Year
+            widget: "number"
+            valueType: "int"
+            min: 1942
+            max: 2030 
+      -   name: endDate
+          label: Date Ended
+          required: false
+          widget: object
+          fields: 
+          - name: month
+            label: Month
+            widget: "number"
+            valueType: "int"
+            min: 1
+            max: 12 
+          - name: year
+            label: Year
+            widget: "number"
+            valueType: "int"
+            min: 1942
+            max: 2030 
+      - { name: summary, label: Summary, , widget: markdown }
+      - { name: website, label: Website, required: false }
+      - { name: logo, label: Logo, widget: "image", required: false }
+      - { name: highlights, label: Highlights, widget: "list", required: false }

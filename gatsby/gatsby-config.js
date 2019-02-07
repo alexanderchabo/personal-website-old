@@ -24,15 +24,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/src/assets/images/`
-    //   }
-    // },
-    // `gatsby-transformer-sharp`,
-    // `gatsby-plugin-sharp`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
+    `gatsby-v2-plugin-page-transitions`,
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images/`
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
@@ -45,9 +49,6 @@ module.exports = {
     //     icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
     //   }
     // },
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-sass`,
-    `gatsby-v2-plugin-page-transitions`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
