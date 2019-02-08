@@ -1,9 +1,8 @@
-import Link from '../Link/Link';
 import * as React from 'react';
+import Link from '../Link/Link';
 import Headroom from 'react-headroom';
 
 import * as styles from './Header.module.scss';
-import HeroBanner from '../HeroBanner/HeroBanner';
 
 interface MenuLink {
   name: string;

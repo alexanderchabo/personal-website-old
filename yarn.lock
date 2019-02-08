@@ -10257,10 +10257,9 @@ react-frame-component@^4.0.2:
   resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-4.0.2.tgz#408f137ab4ba14cd13a5844b86ac972903dda021"
   integrity sha512-846zt81ijEC0ul6sBWzxkI5EGIE39ft9EaNzQUcszV/WWWDnldFJ+tKU7Et2GhZ4OHT/cy1GHcjsLLsdiOXhBg==
 
-react-headroom@^2.2.4:
+"react-headroom@github:tommyka/react-headroom#deploy":
   version "2.2.4"
-  resolved "https://registry.yarnpkg.com/react-headroom/-/react-headroom-2.2.4.tgz#e931bf5f91d0ea2c2fbf0f156a2b82d7db6cbe3b"
-  integrity sha512-4GTSStn577yXD/N8lc7q0HoRxUA9Wbhp5LyvRt72XUImmQ+4vU5aP84+DkfUXrm5Dzqol/y5SPoRmsdr0Q+bdQ==
+  resolved "https://codeload.github.com/tommyka/react-headroom/tar.gz/c3396e822fc0c2ecbdc248011ff7705512aa2119"
   dependencies:
     prop-types "^15.5.8"
     raf "^3.3.0"
