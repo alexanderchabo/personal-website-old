@@ -1,4 +1,5 @@
 ---
+category: work
 position: Software Engineering
 company: Knightec
 location: 'Stockholm, Sweden'
@@ -13,4 +14,3 @@ endDate:
   month: 2018
   year: 3
 ---
-

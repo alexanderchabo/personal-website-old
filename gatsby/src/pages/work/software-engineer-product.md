@@ -1,4 +1,5 @@
 ---
+category: work
 position: Software Engineer - Product
 company: Uppercase
 location: 'Toronto, Canada'
@@ -16,4 +17,3 @@ startDate:
   year: 7
 endDate: {}
 ---
-
