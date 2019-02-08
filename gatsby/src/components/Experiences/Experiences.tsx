@@ -2,13 +2,13 @@ import * as React from 'react';
 import * as styles from './Experiences.module.scss';
 
 interface Date {
-  month: number;
-  year: number;
+  month?: number;
+  year?: number;
 }
 
 interface Experience {
   startDate: Date;
-  endDate?: Date;
+  endDate: Date;
   location: string;
   title: string;
   subTitle: string;
@@ -20,8 +20,8 @@ interface ExperiencesProps {
   experiences: Experience[];
 }
 
-const mapDateToString = (date: Date) =>
-  date ? `${date.month.toString().padStart(2, '0')}/${date.year}` : 'present';
+const mapDateToString = ({ month, year }: Date) =>
+  month && year ? `${month.toString().padStart(2, '0')}/${year}` : 'present';
 
 const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
   <section>
