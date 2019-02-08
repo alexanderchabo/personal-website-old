@@ -3,13 +3,13 @@ backend:
   branch: master
   repo: alexanderchabo/alexanderchabo
 
-media_folder: gatsby/static/assets
+media_folder: static/assets
 public_folder: assets
 
 collections:
   - name: work
     label: Work
-    folder: 'gatsby/src/pages/work/'
+    folder: 'src/pages/work/'
     create: true
     identifier_field: position
     fields:
