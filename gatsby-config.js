@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
     description: `Resume`,
+    author: `@alexanderchabo`,
     menuLinks: [
       {
         name: 'about',
