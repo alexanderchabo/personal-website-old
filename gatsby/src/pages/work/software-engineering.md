@@ -7,10 +7,9 @@ summary: >-
   development, agile project management and embedded systems.
 website: 'https://www.knightec.se/en/'
 startDate:
-  startMonth: 2014
-  startYear: 9
+  month: 2014
+  year: 9
 endDate:
-  endMonth: 2018
-  endYear: 3
+  month: 2018
+  year: 3
 ---
-
