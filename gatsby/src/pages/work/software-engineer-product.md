@@ -12,8 +12,10 @@ highlights:
     Implemented the marketing automation platform increasing volume of inbound
     sales and total revenue
 startDate:
-  startMonth: 2018
-  startYear: 7
-endDate: {}
+  month: 9
+  year: 2014
+endDate:
+  month: 3
+  year: 2018
 ---
 
