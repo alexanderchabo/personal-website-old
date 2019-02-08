@@ -22,13 +22,19 @@ const Work = ({ data }) => (
 );
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        position
+  query WorkQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "work" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            company
+          }
+        }
       }
     }
   }
 `;
+
 export default Work;
