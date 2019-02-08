@@ -35,7 +35,7 @@ collections:
             label: Year
             widget: 'number'
             valueType: 'int'
-            min: 1942
+            min: 1950
             max: 2050
       - name: endDate
         label: Date Ended
@@ -52,5 +52,5 @@ collections:
             label: Year
             widget: 'number'
             valueType: 'int'
-            min: 1942
+            min: 1950
             max: 2050

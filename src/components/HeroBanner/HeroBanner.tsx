@@ -1,22 +1,33 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import * as styles from './HeroBanner.module.scss';
 
 interface HeroBannerProps {
-  srcUrl?: string;
+  srcUrl: string;
+  type: 'video' | 'image';
   body: JSX.Element;
 }
 
 const HeroBanner: React.SFC<HeroBannerProps> = ({
   body,
+  type = 'video',
   srcUrl = 'https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4'
 }) => (
-  <div className={styles.heroBanner}>
+  <div
+    className={classnames(styles.heroBanner, {
+      [styles.isVideo]: type === 'video'
+    })}
+  >
     <div className={styles.overlay} />
     <div className={styles.container}>{body}</div>
-    <video playsInline autoPlay muted loop>
-      <source src={srcUrl} type='video/mp4' />
-    </video>
+    {type === 'video' ? (
+      <video playsInline autoPlay muted loop>
+        <source src={srcUrl} type='video/mp4' />
+      </video>
+    ) : (
+      <img src={srcUrl} />
+    )}
   </div>
 );
 

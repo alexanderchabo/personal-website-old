@@ -4,13 +4,16 @@ import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import HeroBanner from '../HeroBanner/HeroBanner';
 
 import * as styles from './Layout.module.scss';
-import HeroBanner from '../HeroBanner/HeroBanner';
 
 interface LayoutProps {
   children: any;
-  displayHeroBanner?: boolean;
+  hideHeroBanner?: boolean;
+  heroBannerSrcUrl?: string;
+  heroBannerType?: 'video' | 'image';
+  heroBannerBody?: JSX.Element;
 }
 
 interface MenuLink {
@@ -46,21 +49,21 @@ const layoutQuery = graphql`
 const Layout: React.SFC<LayoutPropsWithData> = ({
   children,
   data,
-  displayHeroBanner = false
+  hideHeroBanner = false,
+  heroBannerType = 'image',
+  heroBannerSrcUrl = '',
+  heroBannerBody = <React.Fragment />
 }) => (
   <PageTransition>
     <Header
       siteTitle={data.site.siteMetadata.title}
       menuLinks={data.site.siteMetadata.menuLinks}
     />
-    {displayHeroBanner && (
+    {!hideHeroBanner && (
       <HeroBanner
-        body={
-          <div className={styles.heroBannerBody}>
-            <h1>Hi, I'm Alexander Chabo.</h1>
-            <p>a Software Engineer.</p>
-          </div>
-        }
+        type={heroBannerType}
+        srcUrl={heroBannerSrcUrl}
+        body={heroBannerBody}
       />
     )}
     <div className={styles.mainContainer}>

@@ -1,17 +1,20 @@
-$dot-diameter: 0.5rem;
-$border-width: 0.25rem;
+.tableHeader {
+  margin-bottom: 2rem;
+}
 
-.entry {
-  position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    width: $dot-diameter;
-    height: $dot-diameter;
-    border: $border-width solid salmon;
-    border-radius: 100%;
-    top: $dot-diameter * 2.5;
-    right: 0;
-    z-index: 99;
+.table {
+  h3 {
+    margin: 0;
+    color: rgb(65, 154, 255);
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  td {
+    border: none;
+    vertical-align: top;
   }
 }

@@ -4,7 +4,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
 import Experiences from '../components/Experiences/Experiences';
-import Resume from '../data/resume';
+
+import * as styles from './work.module.scss';
 
 interface Date {
   month?: number;
@@ -36,10 +37,18 @@ interface WorkProps {
 }
 
 const Work = ({ data }: WorkProps) => (
-  <Layout>
+  <Layout
+    heroBannerBody={
+      <div className={styles.heroBannerBody}>
+        <h1>What I've done so far</h1>
+      </div>
+    }
+    heroBannerType='image'
+    heroBannerSrcUrl='https://www.setaswall.com/wp-content/uploads/2017/04/Nyanza-Solid-Color-Background-Wallpaper-5120x2880-340x220.png'
+  >
     <SEO title='Work' />
     <Experiences
-      heading='Work'
+      heading='Experiences'
       experiences={data.allMarkdownRemark.edges.map(
         ({ node: { frontmatter: work } }) => ({
           title: work.position,
@@ -53,7 +62,13 @@ const Work = ({ data }: WorkProps) => (
 
 export const pageQuery = graphql`
   query WorkQuery {
-    allMarkdownRemark(filter: { frontmatter: { category: { eq: "work" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "work" } } }
+      sort: {
+        fields: [frontmatter___endDate___year, frontmatter___endDate___month]
+        order: [DESC, DESC]
+      }
+    ) {
       edges {
         node {
           frontmatter {
