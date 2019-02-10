@@ -8,6 +8,7 @@ summary: >-
   agile teams of more than 30 people while aligning high-priority goals with
   budgets over $10-million.
 website: 'https://www.scania.com/world/'
+logo: /assets/scania-logo-6200x1800.png
 startDate:
   month: 7
   year: 2017
