@@ -77,6 +77,7 @@ export const pageQuery = graphql`
             location
             summary
             highlights
+            logo
             startDate {
               month
               year

@@ -19,10 +19,10 @@ collections:
       - { name: location, label: Location }
       - { name: summary, label: Summary, widget: markdown }
       - { name: website, label: Website, required: false }
-      - { name: logo, label: Logo, widget: 'image', required: false }
+      - { name: logo, label: Logo, widget: 'image', required: true }
       - { name: highlights, label: Highlights, widget: 'list', required: false }
       - name: startDate
-        label: Date started
+        label: Date startedlog
         widget: 'object'
         fields:
           - name: month

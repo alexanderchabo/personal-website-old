@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`
+  }
+};
+
 module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
@@ -35,9 +42,27 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
+    netlifyCmsPaths,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 930,
+              backgroundColor: 'transparent' // required to display blurred image first
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
