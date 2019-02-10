@@ -2,48 +2,44 @@
   margin-bottom: 2rem;
 }
 
-.experienceRow {
-  display: flex;
-  flex-direction: column;
+.displayGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.experienceCardContainer {
   background-color: rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.experienceCardHeader {
+  height: 10rem;
+  background-color: white;
+}
+
+.experienceCardBody {
+  height: 100%;
   padding: 1rem;
-  border-radius: 0.5rem;
-
-  h3 {
-    margin: 0;
-    color: rgb(65, 154, 255);
-  }
-
-  h4 {
-    margin-top: 0;
-    // margin-bottom: 0.5rem;
-  }
 
   p {
     margin: 0;
-    padding-top: 0.5rem;
-  }
-
-  @media (max-width: 770px) {
-    flex-direction: column;
-  }
-}
-
-.experienceHeader {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 770px) {
-    flex-direction: column;
   }
 }
 
 .dateAndLocation {
-  text-align: right;
+  padding-bottom: 1rem;
+  font-size: 80%;
+  white-space: pre-wrap;
+  font-style: italic;
+}
 
-  @media (max-width: 770px) {
-    text-align: left;
+.titles {
+  padding-bottom: 1rem;
+
+  h3,
+  h4 {
+    margin: 0;
   }
 }

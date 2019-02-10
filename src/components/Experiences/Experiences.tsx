@@ -26,35 +26,34 @@ const mapDateToString = ({ month, year }: Date) =>
 const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
   <section>
     <h2 className={styles.tableHeader}>{heading}</h2>
-    {experiences.map(
-      ({
-        startDate,
-        title,
-        subTitle,
-        summary,
-        endDate,
-        location
-      }: Experience) => (
-        <div className={styles.experienceRow}>
-          <div className={styles.experienceHeader}>
-            <div>
-              <h3>{title}</h3>
-              <h4>{subTitle}</h4>
-            </div>
-            <div className={styles.dateAndLocation}>
-              <small style={{ whiteSpace: 'nowrap' }}>
-                {`${mapDateToString(startDate)} to ${mapDateToString(endDate)}`}
-              </small>
-              {/* <br /> */}
-              <div>
-                <small>{location}</small>
+    <div className={styles.displayGrid}>
+      {experiences.map(
+        ({
+          startDate,
+          title,
+          subTitle,
+          summary,
+          endDate,
+          location
+        }: Experience) => (
+          <div className={styles.experienceCardContainer}>
+            <div className={styles.experienceCardHeader} />
+            <div className={styles.experienceCardBody}>
+              <div className={styles.dateAndLocation}>{`${mapDateToString(
+                startDate
+              )} to ${mapDateToString(endDate)}\n${location}`}</div>
+
+              <div className={styles.titles}>
+                <h3>{title}</h3>
+                <h4>{subTitle}</h4>
               </div>
+
+              <p>{summary}</p>
             </div>
           </div>
-          <p>{summary}</p>
-        </div>
-      )
-    )}
+        )
+      )}
+    </div>
   </section>
 );
 
