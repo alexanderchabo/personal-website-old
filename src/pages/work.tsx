@@ -24,13 +24,32 @@ interface Experience {
   logo?: any;
 }
 
+interface Education {
+  startDate: Date;
+  endDate: Date;
+  studyType: string;
+  area: string;
+  institution: string;
+  website: string;
+  logo?: any;
+}
+
 interface WorkProps {
   data: {
-    allMarkdownRemark: {
+    works: {
       edges: [
         {
           node: {
             frontmatter: Experience;
+          };
+        }
+      ];
+    };
+    educations: {
+      edges: [
+        {
+          node: {
+            frontmatter: Education;
           };
         }
       ];
@@ -51,12 +70,21 @@ const Work = ({ data }: WorkProps) => (
     <SEO title='Work' />
     <Experiences
       heading='Experiences'
-      experiences={data.allMarkdownRemark.edges.map(
-        ({ node: { frontmatter: work } }) => ({
-          ...work,
-          title: work.position,
-          subTitle: work.company,
-          logo: work.logo ? work.logo.childImageSharp.fixed : null
+      experiences={data.works.edges.map(({ node: { frontmatter: work } }) => ({
+        ...work,
+        title: work.position,
+        subTitle: work.company,
+        logo: work.logo ? work.logo.childImageSharp.fixed : null
+      }))}
+    />
+    <Experiences
+      heading='Educations'
+      experiences={data.educations.edges.map(
+        ({ node: { frontmatter: education } }) => ({
+          ...education,
+          title: education.institution,
+          subTitle: education.studyType + ' in ' + education.area,
+          logo: education.logo ? education.logo.childImageSharp.fixed : null
         })
       )}
     />
@@ -64,8 +92,8 @@ const Work = ({ data }: WorkProps) => (
 );
 
 export const pageQuery = graphql`
-  query WorkQuery {
-    allMarkdownRemark(
+  query PageQuery {
+    works: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "work" } } }
       sort: {
         fields: [frontmatter___endDate___year, frontmatter___endDate___month]
@@ -91,6 +119,40 @@ export const pageQuery = graphql`
             logo {
               childImageSharp {
                 fixed(width: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+                fluid(maxHeight: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    educations: allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "education" } } }
+      sort: { fields: frontmatter___endDate___year, order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            institution
+            area
+            studyType
+            website
+            startDate {
+              month
+              year
+            }
+            endDate {
+              month
+              year
+            }
+            logo {
+              childImageSharp {
+                fixed(height: 100) {
                   ...GatsbyImageSharpFixed
                 }
                 fluid(maxHeight: 200) {

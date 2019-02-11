@@ -10,10 +10,10 @@ interface Date {
 interface Experience {
   startDate: Date;
   endDate: Date;
-  location: string;
+  location?: string;
   title: string;
   subTitle: string;
-  summary: string;
+  summary?: string;
   logo: any;
 }
 
