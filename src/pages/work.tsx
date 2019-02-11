@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
@@ -20,6 +21,7 @@ interface Experience {
   company: string;
   summary: string;
   highlights: string[];
+  logo?: any;
 }
 
 interface WorkProps {
@@ -51,9 +53,10 @@ const Work = ({ data }: WorkProps) => (
       heading='Experiences'
       experiences={data.allMarkdownRemark.edges.map(
         ({ node: { frontmatter: work } }) => ({
+          ...work,
           title: work.position,
           subTitle: work.company,
-          ...work
+          logo: work.logo ? work.logo.childImageSharp.fluid : null
         })
       )}
     />
@@ -77,7 +80,6 @@ export const pageQuery = graphql`
             location
             summary
             highlights
-            logo
             startDate {
               month
               year
@@ -85,6 +87,16 @@ export const pageQuery = graphql`
             endDate {
               month
               year
+            }
+            logo {
+              childImageSharp {
+                fixed(height: 70) {
+                  ...GatsbyImageSharpFixed
+                }
+                fluid(maxHeight: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }

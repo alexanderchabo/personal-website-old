@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as styles from './Experiences.module.scss';
+import Img, { FixedObject } from 'gatsby-image';
 
 interface Date {
   month?: number;
@@ -13,6 +14,7 @@ interface Experience {
   title: string;
   subTitle: string;
   summary: string;
+  logo: any;
 }
 
 interface ExperiencesProps {
@@ -34,10 +36,15 @@ const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
           subTitle,
           summary,
           endDate,
-          location
+          location,
+          logo
         }: Experience) => (
           <div className={styles.experienceCardContainer}>
-            <div className={styles.experienceCardHeader} />
+            {logo && (
+              <div className={styles.experienceCardHeader}>
+                <Img fluid={logo} />
+              </div>
+            )}
             <div className={styles.experienceCardBody}>
               <div className={styles.dateAndLocation}>{`${mapDateToString(
                 startDate

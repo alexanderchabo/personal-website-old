@@ -1,10 +1,3 @@
-var netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`
-  }
-};
-
 module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
@@ -30,11 +23,13 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-sass`,
-    `gatsby-v2-plugin-page-transitions`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets/`,
+        name: 'assets'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,27 +37,28 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
-    netlifyCmsPaths,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+          `gatsby-remark-relative-images-v2`,
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 930,
-              backgroundColor: 'transparent' // required to display blurred image first
+              backgroundColor: 'transparent'
             }
           }
         ]
       }
     },
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
+    `gatsby-v2-plugin-page-transitions`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
