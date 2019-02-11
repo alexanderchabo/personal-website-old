@@ -56,7 +56,7 @@ const Work = ({ data }: WorkProps) => (
           ...work,
           title: work.position,
           subTitle: work.company,
-          logo: work.logo ? work.logo.childImageSharp.fluid : null
+          logo: work.logo ? work.logo.childImageSharp.fixed : null
         })
       )}
     />
@@ -90,10 +90,10 @@ export const pageQuery = graphql`
             }
             logo {
               childImageSharp {
-                fixed(height: 70) {
+                fixed(width: 250) {
                   ...GatsbyImageSharpFixed
                 }
-                fluid(maxHeight: 100) {
+                fluid(maxHeight: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }

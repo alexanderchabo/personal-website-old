@@ -17,11 +17,11 @@ const IndexPage = () => (
     heroBannerSrcUrl='https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4'
   >
     <SEO title='Home' keywords={[`alexander`, `chabo`, `react`]} />
-    <p style={{ maxWidth: '500px', margin: '2rem auto', textAlign: 'center' }}>
+    <p style={{ maxWidth: '500px', margin: '1rem auto', textAlign: 'center' }}>
       Born and raised in 🇸🇪, moved in april 2018 to 🇨🇦 and doing what I love
       most: <b>Product Development!</b>
     </p>
-    <p style={{ marginTop: '20rem' }} />
+    <p style={{ marginTop: '2rem' }} />
   </Layout>
 );
 

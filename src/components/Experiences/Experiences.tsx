@@ -42,7 +42,7 @@ const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
           <div className={styles.experienceCardContainer}>
             {logo && (
               <div className={styles.experienceCardHeader}>
-                <Img fluid={logo} />
+                <Img fixed={logo} />
               </div>
             )}
             <div className={styles.experienceCardBody}>
