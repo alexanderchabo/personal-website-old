@@ -16,4 +16,3 @@ endDate:
   month: 3
   year: 2018
 ---
-

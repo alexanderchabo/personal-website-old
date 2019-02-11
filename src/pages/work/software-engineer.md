@@ -8,6 +8,7 @@ summary: >-
   Sweden while successfully implementing essential improvements to the software
   architecture.
 website: 'http://www3.gehealthcare.ca/'
+logo: /assets/ge_healthcare_logo.png
 startDate:
   month: 2
   year: 2017
@@ -15,4 +16,3 @@ endDate:
   month: 10
   year: 2017
 ---
-
