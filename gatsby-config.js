@@ -6,11 +6,7 @@ module.exports = {
     menuLinks: [
       {
         name: 'about',
-        link: '/'
-      },
-      {
-        name: 'work',
-        link: '/work'
+        link: '/about'
       },
       {
         name: 'contact',

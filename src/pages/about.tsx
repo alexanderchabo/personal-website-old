@@ -4,12 +4,11 @@ import { FixedObject } from 'gatsby-image';
 
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
-import Icon from '../components/Icon/Icon';
 import VerticalTimeLine from '../components/VerticalTimeLine/VerticalTimeLine';
-
-import * as styles from './work.module.scss';
 import HeroBanner from '../components/HeroBanner/HeroBanner';
 import PageContainer from '../components/PageContainer/PageContainer';
+
+import * as styles from './about.module.scss';
 
 interface Date {
   month?: number;
@@ -41,7 +40,7 @@ interface Education extends Event {
   website: string;
 }
 
-interface WorkProps {
+interface AboutProps {
   data: {
     works: {
       edges: [
@@ -64,7 +63,7 @@ interface WorkProps {
   };
 }
 
-const Work = ({ data }: WorkProps) => (
+const About = ({ data }: AboutProps) => (
   <Layout>
     <SEO title='Work' />
 
@@ -185,4 +184,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default Work;
+export default About;
