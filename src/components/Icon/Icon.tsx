@@ -14,7 +14,7 @@ interface Icon {
 const icons: Icon[] = [
   {
     type: 'github',
-    element: <GithubIcon />
+    element: <GithubIcon style={{ fill: 'white' }} />
   },
   {
     type: 'linkedin',

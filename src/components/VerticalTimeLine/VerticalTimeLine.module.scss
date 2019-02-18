@@ -1,0 +1,21 @@
+.timeLineBugFix {
+  :global {
+    @media only screen and (min-width: 1170px) {
+      .vertical-timeline-element-content {
+        width: 43% !important;
+      }
+
+      .vertical-timeline-element-date {
+        margin: 0 1.5rem;
+      }
+    }
+
+    .vertical-timeline-element-date {
+      white-space: pre-wrap;
+    }
+  }
+}
+
+.logo {
+  margin-bottom: 1rem;
+}

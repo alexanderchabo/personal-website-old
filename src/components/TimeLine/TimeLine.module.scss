@@ -1,10 +1,6 @@
-.tableHeader {
-  margin-bottom: 2rem;
-}
-
 .displayGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   column-gap: 2rem;
   row-gap: 2rem;
 
@@ -15,18 +11,17 @@
 
 .experienceCardContainer {
   background-color: rgba(0, 0, 0, 0.05);
-  // transition: all 300ms ease;
+  margin-left: 1rem;
 
-  // &:hover {
-  //   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  //   transform: translateY(-0.5rem);
-  //   cursor: pointer;
-  // }
+  &:before {
+    content: '';
+    border: 1px solid black;
+    margin-right: 1rem;
+  }
 }
 
 .experienceCardHeader {
   background-color: white;
-  min-height: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;

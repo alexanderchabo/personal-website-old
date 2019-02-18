@@ -1,13 +1,13 @@
 import * as React from 'react';
-import * as styles from './Experiences.module.scss';
-import Img, { FixedObject } from 'gatsby-image';
+import * as styles from './TimeLine.module.scss';
+// import Img, { FixedObject } from 'gatsby-image';
 
 interface Date {
   month?: number;
   year?: number;
 }
 
-interface Experience {
+interface Event {
   startDate: Date;
   endDate: Date;
   location?: string;
@@ -17,19 +17,17 @@ interface Experience {
   logo: any;
 }
 
-interface ExperiencesProps {
-  heading: string;
-  experiences: Experience[];
+interface TimeLineProps {
+  events: Event[];
 }
 
 const mapDateToString = ({ month, year }: Date) =>
   month && year ? `${month.toString().padStart(2, '0')}/${year}` : 'present';
 
-const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
+const TimeLine: React.SFC<TimeLineProps> = ({ events }) => (
   <section>
-    <h2 className={styles.tableHeader}>{heading}</h2>
     <div className={styles.displayGrid}>
-      {experiences.map(
+      {events.map(
         ({
           startDate,
           title,
@@ -38,13 +36,13 @@ const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
           endDate,
           location,
           logo
-        }: Experience) => (
+        }: Event) => (
           <div className={styles.experienceCardContainer}>
-            {logo && (
+            {/* {logo && (
               <div className={styles.experienceCardHeader}>
                 <Img fixed={logo} />
               </div>
-            )}
+            )} */}
             <div className={styles.experienceCardBody}>
               <div className={styles.dateAndLocation}>{`${mapDateToString(
                 startDate
@@ -64,4 +62,4 @@ const Experiences: React.SFC<ExperiencesProps> = ({ heading, experiences }) => (
   </section>
 );
 
-export default Experiences;
+export default TimeLine;

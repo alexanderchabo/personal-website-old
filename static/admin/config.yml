@@ -67,6 +67,7 @@ collections:
       - { name: studyType, label: Study Type }
       - { name: website, label: Website }
       - { name: logo, label: Logo, widget: 'image' }
+      - { name: location, label: Location }
       - name: startDate
         label: Date started
         widget: 'object'

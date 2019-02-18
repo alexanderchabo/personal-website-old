@@ -2936,7 +2936,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.1, create-react-class@^15.5.2, create-react-class@^15.6.0:
+create-react-class@^15.5.1, create-react-class@^15.5.2, create-react-class@^15.6.0, create-react-class@^15.6.3:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
   integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
@@ -3965,11 +3965,6 @@ es6-iterator@^2.0.1, es6-iterator@~2.0.3:
     d "1"
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
-
-es6-promise@^2.0.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-2.3.0.tgz#96edb9f2fdb01995822b263dd8aadab6748181bc"
-  integrity sha1-lu258v2wGZWCKyY92KratnSBgbw=
 
 es6-promise@^3.0.2:
   version "3.3.1"
@@ -5043,15 +5038,6 @@ gatsby-plugin-manifest@^2.0.17:
     bluebird "^3.5.0"
     sharp "^0.21.3"
 
-gatsby-plugin-netlify-cms-paths@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms-paths/-/gatsby-plugin-netlify-cms-paths-1.1.0.tgz#bffe99d9fe982ad796955b36bfa7b6588825acca"
-  integrity sha512-sHzFvcE49Cw12a31VoByUc3ZtDjO1EF14YzaOj9xBPzBQs9X0sZsf7Cc+fk6LBdt30RRnjSgYkyuTN2LK4XdEA==
-  dependencies:
-    babel-runtime "^6.26.0"
-    read-yaml-promise "^1.0.2"
-    unist-util-select "^1.5.0"
-
 gatsby-plugin-netlify-cms@^3.0.12:
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.12.tgz#1812653fba2690f85b2796fa22e4b59b7b169520"
@@ -5124,6 +5110,13 @@ gatsby-plugin-sharp@^2.0.20:
     sharp "^0.21.3"
     svgo "^0.7.2"
 
+gatsby-plugin-styled-components@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.5.tgz#1788493d301e06f514e91f944a33d3a7d7321498"
+  integrity sha512-m0Dvb4THs7QH3tcFJdmiqsnLYQTamvjzyTGMScDi1PtxyD7Z3ixQgwNjAK9Z+tFeE/TCm4JN/Vwm4jlnqB2AvQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-typescript@^2.0.6:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.7.tgz#ef17ab84185bf25497477c48ad543266bfe47ede"
@@ -5167,19 +5160,6 @@ gatsby-remark-relative-images-v2@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/gatsby-remark-relative-images-v2/-/gatsby-remark-relative-images-v2-0.1.5.tgz#3354c7abd96b10b760a934f8c9160e88cbdd1fb1"
   integrity sha512-e8T1/nAltKzGYJpMzAXL46MdqNkzHGpbBqe+rW6lmBAf57o/j0PchjWaaonQl2YXdGTu0YKFpgGmxuPHEX/FUQ==
-  dependencies:
-    babel-polyfill "^6.26.0"
-    cheerio "1.0.0-rc.2"
-    deep-map "1.5.0"
-    is-relative-url "2.0.0"
-    lodash "4.17.5"
-    slash "2.0.0"
-    unist-util-select "1.5.0"
-
-gatsby-remark-relative-images@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-relative-images/-/gatsby-remark-relative-images-0.2.1.tgz#5b1a489a6a4c4cd1e59eca056a6da9980d5e911f"
-  integrity sha512-nxInoB0u7dTIE+AkeL4HoyXZuhzdsdkLIkLIdAdLxQKKEkzwumBnTkH6avR+zZpv2zNk416lG02jcaIAg6+VCQ==
   dependencies:
     babel-polyfill "^6.26.0"
     cheerio "1.0.0-rc.2"
@@ -7183,7 +7163,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.5.2, js-yaml@^3.8.2, js-yaml@^3.9.0:
+js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.5.2, js-yaml@^3.9.0:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
   integrity sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
@@ -10658,6 +10638,23 @@ react-typography@^0.16.18:
   resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.18.tgz#89341b63d615f1dfcf5e471797df5acce5bde1f3"
   integrity sha512-BFkw59H2mkYRLLtHOT2UZve/9/RticAvL7o7rheOo/+tlwQyfF61wF2XzGRcA3IWASg+DbXnNViyywHBFlNj6A==
 
+react-vertical-timeline-component@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-vertical-timeline-component/-/react-vertical-timeline-component-2.3.1.tgz#7b6a45d44cc72b91de50c240011a16402acef0fd"
+  integrity sha512-AnOIuyJnfw2/hTUMBNdBYbUeD9UOYBs8HyEMhV878n2XGDJBhp8XHAFpjEfYlBXefmQFsEUe6Fwz/uT7P4Nxug==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-visibility-sensor "^4.1.0"
+
+react-visibility-sensor@^4.1.0:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-4.1.3.tgz#9a3e9982caff3616cfece94e118e5b3c6e08ce6a"
+  integrity sha512-X+xKuZc0muwR72/jtWerZbrmBo3F3VQwwm6Aqt+9QCILqOng9JzEnYSOqzrOVA5HZenHm5vAr6yRtO2KKRt9yA==
+  dependencies:
+    create-react-class "^15.6.3"
+    prop-types "^15.6.2"
+
 react-waypoint@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/react-waypoint/-/react-waypoint-8.1.0.tgz#91d926a2fd1be4cbd0351cb8c3d494fac0ef1699"
@@ -10734,22 +10731,6 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-read-yaml-promise@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/read-yaml-promise/-/read-yaml-promise-1.0.2.tgz#604b6113f27f773790f4a7462d0427305ed0647b"
-  integrity sha1-YEthE/J/dzeQ9KdGLQQnMF7QZHs=
-  dependencies:
-    es6-promise "^2.0.0"
-    read-yaml "^1.0.0"
-
-read-yaml@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/read-yaml/-/read-yaml-1.1.0.tgz#0d273ac0c95be92230dc0d4c4c4f5b8960a336d6"
-  integrity sha1-DSc6wMlb6SIw3A1MTE9biWCjNtY=
-  dependencies:
-    extend-shallow "^2.0.1"
-    js-yaml "^3.8.2"
-
 read@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/read/-/read-1.0.7.tgz#b3da19bd052431a97671d44a42634adf710b40c4"
@@ -10797,6 +10778,13 @@ readdirp@^2.0.0, readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
+
+rebass@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rebass/-/rebass-3.0.1.tgz#140230f4e4eceaf7adb682bcf380ceb0fff82d2f"
+  integrity sha512-IiETPunFNc3zoZoHpDsCS2Gk+OvTF6tDOSBeZzDSk9d2RMg/5DeRaXgnXnaYm+4XY1tcj7iV3psURqWpIcSdtg==
+  dependencies:
+    styled-system "^3.2.1"
 
 recompose@^0.30.0:
   version "0.30.0"
@@ -12420,6 +12408,14 @@ style-to-object@^0.2.1:
   integrity sha512-GcbtvfsqyKmIPpHeOHZ5Rmwsx2MDJct4W9apmTGcbPTbpA2FcgTFl2Z43Hm4Qb61MWGPNK8Chki7ITiY7lLOow==
   dependencies:
     css "2.2.4"
+
+styled-system@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
+  integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    prop-types "^15.6.2"
 
 stylehacks@^4.0.0:
   version "4.0.1"

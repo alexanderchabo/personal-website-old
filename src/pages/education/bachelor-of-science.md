@@ -5,6 +5,7 @@ area: Mechanical Engineering
 studyType: Bachelor of Science
 website: 'https://www.kth.se/en'
 logo: /assets/kth_logo.svg.png
+location: 'Stockholm, Sweden'
 startDate:
   month: 8
   year: 2009
@@ -12,4 +13,3 @@ endDate:
   month: 5
   year: 2012
 ---
-
