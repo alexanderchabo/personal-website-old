@@ -2,18 +2,12 @@ import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
+// Components
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import HeroBanner from '../HeroBanner/HeroBanner';
-
-import * as styles from './Layout.module.scss';
 
 interface LayoutProps {
   children: any;
-  hideHeroBanner?: boolean;
-  heroBannerSrcUrl?: string;
-  heroBannerType?: 'video' | 'image';
-  heroBannerBody?: JSX.Element;
 }
 
 interface MenuLink {
@@ -46,31 +40,17 @@ const layoutQuery = graphql`
   }
 `;
 
-const Layout: React.SFC<LayoutPropsWithData> = ({
-  children,
-  data,
-  hideHeroBanner = false,
-  heroBannerType = 'image',
-  heroBannerSrcUrl = '',
-  heroBannerBody = <React.Fragment />
-}) => (
-  <PageTransition>
+const Layout: React.SFC<LayoutPropsWithData> = ({ children, data }) => (
+  <>
     <Header
       siteTitle={data.site.siteMetadata.title}
       menuLinks={data.site.siteMetadata.menuLinks}
     />
-    {!hideHeroBanner && (
-      <HeroBanner
-        type={heroBannerType}
-        srcUrl={heroBannerSrcUrl}
-        body={heroBannerBody}
-      />
-    )}
-    <div className={styles.mainContainer}>
+    <PageTransition>
       <main>{children}</main>
       <Footer />
-    </div>
-  </PageTransition>
+    </PageTransition>
+  </>
 );
 
 export default (props: LayoutProps) => (

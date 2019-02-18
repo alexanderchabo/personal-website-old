@@ -23,7 +23,7 @@ interface Event {
   title: string;
   subTitle: string;
   summary?: string;
-  logo: any;
+  logo: FixedObject;
 }
 
 interface VerticalTimeLineProps {
@@ -51,12 +51,12 @@ const VerticalTimeLine: React.SFC<VerticalTimeLineProps> = ({
           date={`${mapDatesToString(startDate, endDate)}\n${location}`}
           iconStyle={{
             background:
-              type === 'work' ? 'rgb(33, 150, 243)' : 'rgb(233, 30, 99)',
+              type === 'work' ? 'rgb(33, 150, 243)' : 'rgb(0, 60, 200)',
             color: '#fff'
           }}
-          icon={
-            type === 'work' ? <Icon icon='github' /> : <Icon icon='messenger' />
-          }
+          //   icon={
+          //     type === 'work' ? <Icon icon='github' /> : <Icon icon='messenger' />
+          //   }
         >
           {logo && <Img className={styles.logo} fixed={logo} />}
           <h3 className='vertical-timeline-element-title'>{title}</h3>

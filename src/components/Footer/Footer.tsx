@@ -3,6 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 import { graphql, StaticQuery } from 'gatsby';
 
 import * as styles from './Footer.module.scss';
+import PageContainer from '../PageContainer/PageContainer';
 
 const footerQuery = graphql`
   query FooterQuery {
@@ -31,18 +32,20 @@ interface FooterProps {
 }
 
 const Footer: React.SFC<FooterProps> = ({ data }) => (
-  <footer className={styles.footer}>
-    Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>,{' '}
-    <a href='https://reactjs.org/'>React</a> and ❤️. Hosted on{' '}
-    <a href='https://www.netlify.com/'>Netlify</a>. The code is open source
-    and available at{' '}
-    <a href='https://github.com/alexanderchabo/alexanderchabo'>Github</a>.
-    <div className={styles.socialBar}>
-      {Object.values(data.site.siteMetadata.social).map(key => (
-        <SocialIcon url={key} style={{ height: 24, width: 24 }} />
-      ))}
-    </div>
-  </footer>
+  <PageContainer>
+    <footer className={styles.footer}>
+      Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>,{' '}
+      <a href='https://reactjs.org/'>React</a> and ❤️. Hosted on{' '}
+      <a href='https://www.netlify.com/'>Netlify</a>. The code is open source
+      and available at{' '}
+      <a href='https://github.com/alexanderchabo/alexanderchabo'>Github</a>.
+      <div className={styles.socialBar}>
+        {Object.values(data.site.siteMetadata.social).map(key => (
+          <SocialIcon url={key} style={{ height: 24, width: 24 }} />
+        ))}
+      </div>
+    </footer>
+  </PageContainer>
 );
 
 export default () => (

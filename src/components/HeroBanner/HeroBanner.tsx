@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import * as styles from './HeroBanner.module.scss';
 
 interface HeroBannerProps {
-  srcUrl: string;
-  type: 'video' | 'image';
+  srcUrl?: string;
+  type?: 'video' | 'image';
   body: JSX.Element;
 }
 
