@@ -32,6 +32,7 @@
     "react-dom": "^16.7.0",
     "react-headroom": "github:tommyka/react-headroom#deploy",
     "react-helmet": "^5.2.0",
+    "react-reveal": "^1.2.2",
     "react-social-icons": "^4.1.0",
     "react-typography": "^0.16.18",
     "react-vertical-timeline-component": "^2.3.1",
