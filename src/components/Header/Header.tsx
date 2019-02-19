@@ -17,29 +17,23 @@ interface HeaderProps {
 
 const Header: React.SFC<HeaderProps> = ({ siteTitle = '', menuLinks }) => (
   <header>
-    <Headroom
-      style={{
-        zIndex: 10
-      }}
-    >
-      <div className={styles.headerContainer}>
-        <PageContainer>
-          <div className={styles.header}>
-            <h1 className={styles.h1}>
-              <Link to='/'>{'AC'}</Link>
-            </h1>
-            <nav className={styles.nav}>
-              <ul>
-                {menuLinks.map(link => (
-                  <li key={link.name}>
-                    <Link to={link.link}>{link.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </PageContainer>
-      </div>
+    <Headroom disableInlineStyles>
+      <PageContainer>
+        <div className={styles.header}>
+          <h2 className={styles.h2}>
+            <Link to='/'>{'AC'}</Link>
+          </h2>
+          <nav className={styles.nav}>
+            <ul>
+              {menuLinks.map(link => (
+                <li key={link.name}>
+                  <Link to={link.link}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </PageContainer>
     </Headroom>
   </header>
 );

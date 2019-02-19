@@ -1,6 +1,6 @@
 .heroBanner {
   position: relative;
-  background-color: black;
+  background-color: #f7cf80;
   height: 50vh;
   min-height: 15rem;
   width: 100%;
@@ -31,7 +31,7 @@
     position: relative;
     z-index: 2;
     * {
-      color: white;
+      color: black;
     }
   }
 
@@ -47,15 +47,15 @@
   }
 }
 
-@media (pointer: coarse) and (hover: none) {
-  .heroBanner {
-    &.isVideo {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black
-        no-repeat center center scroll;
+// @media (pointer: coarse) and (hover: none) {
+//   .heroBanner {
+//     &.isVideo {
+//       background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black
+//         no-repeat center center scroll;
 
-      video {
-        display: none;
-      }
-    }
-  }
-}
+//       video {
+//         display: none;
+//       }
+//     }
+//   }
+// }

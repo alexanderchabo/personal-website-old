@@ -22,17 +22,17 @@ const HeroBanner: React.SFC<HeroBannerProps> = ({
       [styles.isVideo]: type === 'video'
     })}
   >
-    <div className={styles.overlay} />
+    {/* <div className={styles.overlay} /> */}
     <div className={styles.container}>
       {disableFadeIn ? body : <Fade top>{body}</Fade>}
     </div>
-    {type === 'video' ? (
+    {/* {type === 'video' ? (
       <video playsInline autoPlay muted loop>
         <source src={srcUrl} type='video/mp4' />
       </video>
     ) : (
       <img src={srcUrl} />
-    )}
+    )} */}
   </div>
 );
 

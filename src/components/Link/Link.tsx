@@ -12,7 +12,12 @@ const Link = ({ children, to, ...other }) => {
   // Use Gatsby Link for internal links, and <a> for others
   if (internal) {
     return (
-      <GatsbyLink to={to} {...other}>
+      <GatsbyLink
+        to={to}
+        activeClassName='active'
+        activeStyle={{ color: '#003cc8' }}
+        {...other}
+      >
         {children}
       </GatsbyLink>
     );

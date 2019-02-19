@@ -71,7 +71,8 @@ const About = ({ data }: AboutProps) => (
       <HeroBanner
         body={
           <div className={styles.heroBannerBody}>
-            <h1>My work</h1>
+            <h1>Work experience</h1>
+            <p>My previous jobs and my qualifications</p>
           </div>
         }
       />
@@ -92,7 +93,8 @@ const About = ({ data }: AboutProps) => (
       <HeroBanner
         body={
           <div className={styles.heroBannerBody}>
-            <h1>My education</h1>
+            <h1>Education</h1>
+            <p>Math has always been a strength of</p>
           </div>
         }
       />

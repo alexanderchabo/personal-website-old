@@ -50,13 +50,9 @@ const VerticalTimeLine: React.SFC<VerticalTimeLineProps> = ({
           className={`vertical-timeline-element--${type}`}
           date={`${mapDatesToString(startDate, endDate)}\n${location}`}
           iconStyle={{
-            background:
-              type === 'work' ? 'rgb(33, 150, 243)' : 'rgb(0, 60, 200)',
+            background: 'rgb(0, 60, 200)',
             color: '#fff'
           }}
-          //   icon={
-          //     type === 'work' ? <Icon icon='github' /> : <Icon icon='messenger' />
-          //   }
         >
           {logo && <Img className={styles.logo} fixed={logo} />}
           <h3 className='vertical-timeline-element-title'>{title}</h3>

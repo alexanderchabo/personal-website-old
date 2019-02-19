@@ -40,16 +40,18 @@ const layoutQuery = graphql`
   }
 `;
 
+// const duration = 1000;
+
 const Layout: React.SFC<LayoutPropsWithData> = ({ children, data }) => (
   <>
     <Header
       siteTitle={data.site.siteMetadata.title}
       menuLinks={data.site.siteMetadata.menuLinks}
     />
-    <PageTransition>
-      <main>{children}</main>
-      <Footer />
-    </PageTransition>
+    {/* <PageTransition> */}
+    <main>{children}</main>
+    <Footer />
+    {/* </PageTransition> */}
   </>
 );
 
