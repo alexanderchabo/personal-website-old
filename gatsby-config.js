@@ -15,7 +15,9 @@ module.exports = {
     ],
     social: {
       github: 'https://github.com/alexanderchabo',
-      linkedin: 'https://www.linkedin.com/in/alexanderchabo/'
+      linkedIn: 'https://www.linkedin.com/in/alexanderchabo/',
+      facebook: 'https://www.facebook.com/alexanderchabo',
+      email: 'mailto:alexander.chabo@gmail.com'
     }
   },
   plugins: [

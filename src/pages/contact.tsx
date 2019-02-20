@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Fade } from 'react-reveal';
 
 // Components
 import Layout from '../components/Layout/Layout';
@@ -11,21 +12,20 @@ import * as styles from './contact.module.scss';
 const Contact = () => (
   <Layout>
     <SEO title='Contact' />
-    <HeroBanner
-      body={
-        <div className={styles.heroBannerBody}>
-          <h1>Say hi!</h1>
-        </div>
-      }
-    />
+    <HeroBanner title='Say Hi!' subTitle='It never hurts to be friendly' />
     <PageContainer>
-      <p
-        style={{ maxWidth: '500px', margin: '2rem auto', textAlign: 'center' }}
-      >
-        Get in touch with me by clicking{' '}
-        <a href='mailto:alexander.chabo@gmail.com'>here</a>
-      </p>
-      <p style={{ marginTop: '10rem' }} />
+      <Fade bottom delay={500}>
+        <p
+          style={{
+            maxWidth: '500px',
+            margin: '1rem auto',
+            textAlign: 'center'
+          }}
+        >
+          Get in touch with me by clicking{' '}
+          <a href='mailto:alexander.chabo@gmail.com'>here</a>
+        </p>
+      </Fade>
     </PageContainer>
   </Layout>
 );

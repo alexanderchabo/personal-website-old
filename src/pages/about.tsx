@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import { FixedObject } from 'gatsby-image';
+import { Fade } from 'react-reveal';
 
+// Components
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
 import VerticalTimeLine from '../components/VerticalTimeLine/VerticalTimeLine';
 import HeroBanner from '../components/HeroBanner/HeroBanner';
 import PageContainer from '../components/PageContainer/PageContainer';
 
+// Styles
 import * as styles from './about.module.scss';
 
 interface Date {
@@ -68,14 +71,7 @@ const About = ({ data }: AboutProps) => (
     <SEO title='Work' />
 
     <section>
-      <HeroBanner
-        body={
-          <div className={styles.heroBannerBody}>
-            <h1>Work experience</h1>
-            <p>My previous jobs and my qualifications</p>
-          </div>
-        }
-      />
+      <HeroBanner title='Work' subTitle='Wearer of many hats' />
       <PageContainer>
         <VerticalTimeLine
           type='work'
@@ -90,14 +86,7 @@ const About = ({ data }: AboutProps) => (
     </section>
 
     <section>
-      <HeroBanner
-        body={
-          <div className={styles.heroBannerBody}>
-            <h1>Education</h1>
-            <p>Math has always been a strength of</p>
-          </div>
-        }
-      />
+      <HeroBanner title='Education' subTitle='The math is strong in this one' />
       <PageContainer>
         <VerticalTimeLine
           type='education'
@@ -109,7 +98,7 @@ const About = ({ data }: AboutProps) => (
               logo: education.logo ? education.logo.childImageSharp.fixed : null
             })
           )}
-        />{' '}
+        />
       </PageContainer>
     </section>
   </Layout>

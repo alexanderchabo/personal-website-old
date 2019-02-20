@@ -11,7 +11,9 @@ const footerQuery = graphql`
       siteMetadata {
         social {
           github
-          linkedin
+          linkedIn
+          facebook
+          email
         }
       }
     }
@@ -24,7 +26,9 @@ interface FooterProps {
       siteMetadata: {
         social: {
           github: string;
-          linkedin: string;
+          linkedIn: string;
+          facebook: string;
+          email: string;
         };
       };
     };
@@ -32,8 +36,8 @@ interface FooterProps {
 }
 
 const Footer: React.SFC<FooterProps> = ({ data }) => (
-  <PageContainer>
-    <footer className={styles.footer}>
+  <footer className={styles.footer}>
+    <PageContainer>
       Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>,{' '}
       <a href='https://reactjs.org/'>React</a> and ❤️. Hosted on{' '}
       <a href='https://www.netlify.com/'>Netlify</a>. The code is open source
@@ -41,11 +45,16 @@ const Footer: React.SFC<FooterProps> = ({ data }) => (
       <a href='https://github.com/alexanderchabo/alexanderchabo'>Github</a>.
       <div className={styles.socialBar}>
         {Object.values(data.site.siteMetadata.social).map(key => (
-          <SocialIcon url={key} style={{ height: 24, width: 24 }} />
+          <SocialIcon
+            className={styles.icon}
+            bgColor='gray'
+            url={key}
+            style={{ height: 40, width: 40 }}
+          />
         ))}
       </div>
-    </footer>
-  </PageContainer>
+    </PageContainer>
+  </footer>
 );
 
 export default () => (
