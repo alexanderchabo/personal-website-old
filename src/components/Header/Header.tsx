@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import Headroom from 'react-headroom';
 
 // Components
@@ -9,36 +8,11 @@ import Link from '../Link/Link';
 // Styles
 import * as styles from './Header.module.scss';
 
-interface MenuLink {
-  name: string;
-  link: string;
-}
-
-interface HeaderQuery {
-  site: {
-    siteMetadata: {
-      title: string;
-      menuLinks: MenuLink[];
-    };
-  };
-}
-
-const headerQuery = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-        menuLinks {
-          name
-          link
-        }
-      }
-    }
-  }
-`;
+// Utils
+import useSiteMetadata from '../../utils/useSiteMetadata';
 
 const Header: React.FC = () => {
-  const data: HeaderQuery = useStaticQuery(headerQuery);
+  const { menuLinks } = useSiteMetadata();
 
   return (
     <header>
@@ -50,7 +24,7 @@ const Header: React.FC = () => {
             </h2>
             <nav className={styles.nav}>
               <ul>
-                {data.site.siteMetadata.menuLinks.map(link => (
+                {menuLinks.map(link => (
                   <li key={link.name}>
                     <Link to={link.link}>{link.name}</Link>
                   </li>

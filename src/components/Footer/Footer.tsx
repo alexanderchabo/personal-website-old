@@ -1,40 +1,14 @@
 import * as React from 'react';
 import { SocialIcon } from 'react-social-icons';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import * as styles from './Footer.module.scss';
 import PageContainer from '../PageContainer/PageContainer';
 
-const footerQuery = graphql`
-  query FooterQuery {
-    site {
-      siteMetadata {
-        social {
-          github
-          linkedIn
-          facebook
-          email
-        }
-      }
-    }
-  }
-`;
-
-interface FooterQuery {
-  site: {
-    siteMetadata: {
-      social: {
-        github: string;
-        linkedIn: string;
-        facebook: string;
-        email: string;
-      };
-    };
-  };
-}
+// Utils
+import useSiteMetadata from '../../utils/useSiteMetadata';
 
 const Footer: React.FC = () => {
-  const data: FooterQuery = useStaticQuery(footerQuery);
+  const { social } = useSiteMetadata();
 
   return (
     <footer className={styles.footer}>
@@ -45,7 +19,7 @@ const Footer: React.FC = () => {
         and available at{' '}
         <a href='https://github.com/alexanderchabo/alexanderchabo'>Github</a>.
         <div className={styles.socialBar}>
-          {Object.values(data.site.siteMetadata.social).map(key => (
+          {Object.values(social).map(key => (
             <SocialIcon
               className={styles.icon}
               bgColor='gray'
