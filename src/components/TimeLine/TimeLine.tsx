@@ -24,7 +24,7 @@ interface TimeLineProps {
 const mapDateToString = ({ month, year }: Date) =>
   month && year ? `${month.toString().padStart(2, '0')}/${year}` : 'present';
 
-const TimeLine: React.SFC<TimeLineProps> = ({ events }) => (
+const TimeLine: React.FC<TimeLineProps> = ({ events }) => (
   <section>
     <div className={styles.displayGrid}>
       {events.map(

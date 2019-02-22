@@ -5,7 +5,7 @@ interface PageContainerProps {
   children: any;
 }
 
-const PageContainer: React.SFC<PageContainerProps> = ({ children }) => (
+const PageContainer: React.FC<PageContainerProps> = ({ children }) => (
   <div className={styles.container}>{children}</div>
 );
 

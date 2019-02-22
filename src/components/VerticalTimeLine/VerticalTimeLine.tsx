@@ -31,7 +31,7 @@ interface VerticalTimeLineProps {
   type: 'work' | 'education';
 }
 
-const VerticalTimeLine: React.SFC<VerticalTimeLineProps> = ({
+const VerticalTimeLine: React.FC<VerticalTimeLineProps> = ({
   events,
   type
 }) => (

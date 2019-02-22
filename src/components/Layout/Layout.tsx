@@ -1,4 +1,3 @@
-import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
@@ -7,47 +6,12 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 interface LayoutProps {
-  children: any;
+  children: React.ReactNode;
 }
 
-interface MenuLink {
-  name: string;
-  link: string;
-}
-
-interface LayoutPropsWithData extends LayoutProps {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string;
-        menuLinks: MenuLink[];
-      };
-    };
-  };
-}
-
-const layoutQuery = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-        menuLinks {
-          name
-          link
-        }
-      }
-    }
-  }
-`;
-
-// const duration = 1000;
-
-const Layout: React.SFC<LayoutPropsWithData> = ({ children, data }) => (
+const Layout: React.FC<LayoutProps> = ({ children }) => (
   <>
-    <Header
-      siteTitle={data.site.siteMetadata.title}
-      menuLinks={data.site.siteMetadata.menuLinks}
-    />
+    <Header />
     {/* <PageTransition> */}
     <main>{children}</main>
     <Footer />
@@ -55,9 +19,4 @@ const Layout: React.SFC<LayoutPropsWithData> = ({ children, data }) => (
   </>
 );
 
-export default (props: LayoutProps) => (
-  <StaticQuery
-    query={layoutQuery}
-    render={data => <Layout data={data} {...props} />}
-  />
-);
+export default Layout;

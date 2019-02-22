@@ -9,7 +9,7 @@ interface HeroBannerProps {
   disableFadeIn?: boolean;
 }
 
-const HeroBanner: React.SFC<HeroBannerProps> = ({
+const HeroBanner: React.FC<HeroBannerProps> = ({
   title,
   subTitle,
   disableFadeIn = false

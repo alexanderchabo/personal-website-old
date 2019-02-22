@@ -30,7 +30,7 @@ interface IconProps {
   icon: IconType;
 }
 
-const Icon: React.SFC<IconProps> = ({ icon }) => {
+const Icon: React.FC<IconProps> = ({ icon }) => {
   const foundIcon = icons.find(({ type }) => type === icon);
 
   return foundIcon ? foundIcon.element : null;
