@@ -22,7 +22,7 @@ const IndexPage = () => (
           style={{
             maxWidth: '500px',
             textAlign: 'center',
-            margin: 0
+            margin: '0 auto'
           }}
         >
           Born and raised in 🇸🇪, moved in april 2018 to 🇨🇦 and doing what I love
