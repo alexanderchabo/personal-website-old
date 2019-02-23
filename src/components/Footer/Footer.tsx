@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { SocialIcon } from 'react-social-icons';
 
-import * as styles from './Footer.module.scss';
-import PageContainer from '../PageContainer/PageContainer';
+// Components
+import PageContainer from 'components/PageContainer/PageContainer';
 
 // Utils
-import useSiteMetadata from '../../utils/useSiteMetadata';
+import useSiteMetadata from 'utils/useSiteMetadata';
+
+// Styles
+import * as styles from './Footer.module.scss';
 
 const Footer: React.FC = () => {
   const { social } = useSiteMetadata();

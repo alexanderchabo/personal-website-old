@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 // Components
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO/SEO';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
+import Layout from 'components/Layout/Layout';
+import SEO from 'components/SEO/SEO';
+import HeroBanner from 'components/HeroBanner/HeroBanner';
 
+// Styles
 import * as styles from './404.module.scss';
 
 const NotFoundPage = () => (

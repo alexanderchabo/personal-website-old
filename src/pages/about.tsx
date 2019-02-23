@@ -4,11 +4,11 @@ import { FixedObject } from 'gatsby-image';
 import { Fade } from 'react-reveal';
 
 // Components
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO/SEO';
-import VerticalTimeLine from '../components/VerticalTimeLine/VerticalTimeLine';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
-import PageContainer from '../components/PageContainer/PageContainer';
+import Layout from 'components/Layout/Layout';
+import SEO from 'components/SEO/SEO';
+import VerticalTimeLine from 'components/VerticalTimeLine/VerticalTimeLine';
+import HeroBanner from 'components/HeroBanner/HeroBanner';
+import PageContainer from 'components/PageContainer/PageContainer';
 
 // Styles
 import * as styles from './about.module.scss';
@@ -66,7 +66,7 @@ interface AboutProps {
   };
 }
 
-const About = ({ data }: AboutProps) => (
+const About: React.FC<AboutProps> = ({ data }) => (
   <Layout>
     <SEO title='Work' />
 

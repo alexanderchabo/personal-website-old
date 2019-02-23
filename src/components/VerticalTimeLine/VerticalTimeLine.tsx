@@ -1,15 +1,19 @@
 import * as React from 'react';
 import Img, { FixedObject } from 'gatsby-image';
-
 import {
   VerticalTimeline as VerticalTimelineBase,
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { mapDatesToString } from '../../utils/dateFormatter';
 
+// Components
+import Icon from 'components/Icon/Icon';
+
+// Utils
+import { mapDatesToString } from 'utils/dateFormatter';
+
+// Styles
 import * as styles from './VerticalTimeLine.module.scss';
-import Icon from '../Icon/Icon';
 
 interface Date {
   month?: number;

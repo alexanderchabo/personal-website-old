@@ -2,14 +2,14 @@ import * as React from 'react';
 import Headroom from 'react-headroom';
 
 // Components
-import PageContainer from '../PageContainer/PageContainer';
-import Link from '../Link/Link';
+import PageContainer from 'components/PageContainer/PageContainer';
+import Link from 'components/Link/Link';
 
 // Styles
 import * as styles from './Header.module.scss';
 
 // Utils
-import useSiteMetadata from '../../utils/useSiteMetadata';
+import useSiteMetadata from 'utils/useSiteMetadata';
 
 const Header: React.FC = () => {
   const { menuLinks } = useSiteMetadata();

@@ -2,11 +2,12 @@ import * as React from 'react';
 import { Fade } from 'react-reveal';
 
 // Components
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO/SEO';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
-import PageContainer from '../components/PageContainer/PageContainer';
+import Layout from 'components/Layout/Layout';
+import SEO from 'components/SEO/SEO';
+import HeroBanner from 'components/HeroBanner/HeroBanner';
+import PageContainer from 'components/PageContainer/PageContainer';
 
+// Styles
 import * as styles from './contact.module.scss';
 
 const Contact = () => (

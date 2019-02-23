@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
@@ -22,9 +24,19 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        src: path.join(__dirname, 'src'),
+        pages: path.join(__dirname, 'src/pages'),
+        components: path.join(__dirname, 'src/components'),
+        utils: path.join(__dirname, 'src/utils'),
+        assets: path.join(__dirname, 'src/assets')
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/assets/`,
+        path: path.join(__dirname, 'static/assets'),
         name: 'assets'
       }
     },
@@ -32,7 +44,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`
+        path: path.join(__dirname, 'src/pages')
       }
     },
     `gatsby-transformer-sharp`,

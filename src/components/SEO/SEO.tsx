@@ -2,7 +2,7 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 
 // Utils
-import useSiteMetadata from '../../utils/useSiteMetadata';
+import useSiteMetadata from 'utils/useSiteMetadata';
 
 interface SEOProps {
   description?: string;

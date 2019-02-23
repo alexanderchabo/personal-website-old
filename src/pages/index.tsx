@@ -2,11 +2,12 @@ import * as React from 'react';
 import { Fade } from 'react-reveal';
 
 // Components
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/SEO/SEO';
-import PageContainer from '../components/PageContainer/PageContainer';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
+import Layout from 'components/Layout/Layout';
+import SEO from 'components/SEO/SEO';
+import PageContainer from 'components/PageContainer/PageContainer';
+import HeroBanner from 'components/HeroBanner/HeroBanner';
 
+// Styles
 import * as styles from './index.module.scss';
 
 const IndexPage = () => (

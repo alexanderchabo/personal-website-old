@@ -2,8 +2,8 @@ import * as React from 'react';
 import PageTransition from 'gatsby-v2-plugin-page-transitions';
 
 // Components
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 interface LayoutProps {
   children: React.ReactNode;

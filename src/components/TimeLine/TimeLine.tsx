@@ -1,6 +1,7 @@
 import * as React from 'react';
+
+// Styles
 import * as styles from './TimeLine.module.scss';
-// import Img, { FixedObject } from 'gatsby-image';
 
 interface Date {
   month?: number;
