@@ -16,5 +16,8 @@ highlights:
 startDate:
   month: 7
   year: 2018
-endDate: {}
+endDate:
+  month: 1
+  year: 2019
 ---
+
