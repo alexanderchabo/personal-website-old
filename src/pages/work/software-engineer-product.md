@@ -1,6 +1,6 @@
 ---
 category: work
-position: Software Engineer - Product
+position: Software Engineer
 company: Uppercase
 location: 'Toronto, Canada'
 summary: >-
