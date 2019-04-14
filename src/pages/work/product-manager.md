@@ -13,7 +13,7 @@ startDate:
   month: 11
   year: 2014
 endDate:
-  month: 12
+  month: 6
   year: 2015
 ---
 
