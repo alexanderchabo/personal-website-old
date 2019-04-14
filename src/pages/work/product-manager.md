@@ -10,9 +10,10 @@ summary: >-
 website: 'https://www.scania.com/world/#/'
 logo: /assets/scania-logo-6200x1800.png
 startDate:
-  month: 9
+  month: 11
   year: 2014
 endDate:
   month: 12
   year: 2015
 ---
+
