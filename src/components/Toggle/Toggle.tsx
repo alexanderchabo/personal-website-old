@@ -15,10 +15,14 @@ class Toggle extends React.Component {
   };
 
   componentWillMount() {
-    this.setState({ theme: window.__theme });
+    if (typeof window !== `undefined`) {
+      this.setState({ theme: window.__theme });
+    }
   }
 
   componentDidMount() {
+    this.setState({ theme: window.__theme });
+
     window.__onThemeChange = () => {
       this.setState({ theme: window.__theme });
     };
