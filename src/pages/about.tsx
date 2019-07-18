@@ -71,6 +71,31 @@ const About: React.FC<AboutProps> = ({ data }) => (
     <SEO title='Work' />
 
     <section>
+      <HeroBanner
+        title={`Hi! I'm Alexander`}
+        subTitle='An organism that turns caffeine into software'
+      />
+      <Fade bottom delay={500}>
+        <p
+          style={{
+            padding: '20px',
+            textAlign: 'center',
+            margin: '0 auto',
+            height: '40vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <span>Born and raised in 🇸🇪</span>
+          <span>Relocated in april 2018 to 🇨🇦</span>
+          <br />
+          <span>Doing what I love most: <b>Product Development!</b></span>
+        </p>
+      </Fade>
+    </section>
+
+    <section>
       <HeroBanner title='Work' subTitle='Wearer of many hats' />
       <PageContainer>
         <VerticalTimeLine

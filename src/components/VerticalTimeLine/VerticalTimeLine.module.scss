@@ -1,6 +1,13 @@
 .timeLineBugFix {
+  &:before {
+    :global {
+      background-color: var(--cardCircleBoxShadow);
+      transition: background-color 0.2s ease-out;
+    }
+  }
+
   :global {
-    @media only screen and (min-width: 1170px) {
+    @media only screen and (min-width: 1000px) {
       .vertical-timeline-element-content {
         width: 43% !important;
       }
@@ -10,8 +17,37 @@
       }
     }
 
+    .vertical-timeline-element-content {
+      background-color: var(--cardBg);
+      box-shadow: 0 3px 0 var(--cardBorderShadow);
+      transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,;
+    }
+
     .vertical-timeline-element-date {
       white-space: pre-wrap;
+    }
+
+    .vertical-timeline-element-content::before {
+      transition: border-color 0.2s ease-out;
+    }
+
+    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+      border-right-color: var(--cardBg);
+    }
+
+    .vertical-timeline-element:nth-child(odd):not(.vertical-timeline-element--left  ) .vertical-timeline-element-content::before {
+      border-left-color: var(--cardBg);
+    }
+
+
+    .vertical-timeline-element-content * {
+      color: var(--normalText);
+    }
+
+    .vertical-timeline-element-icon {
+      background-color: var(--cardCircleBg);
+      box-shadow: 0 0 0 4px var(--cardCircleBoxShadow), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+      transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,;
     }
   }
 }

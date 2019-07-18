@@ -1,7 +1,8 @@
 .heroBanner {
   position: relative;
-  background-color: #f7cf80;
-  height: 60vh;
+  background-color: var(--headerBg);
+  transition: background-color 0.2s ease-out;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
 }
@@ -15,7 +16,7 @@
   position: relative;
   z-index: 2;
   * {
-    color: black;
+    color: var(--textNormal);
   }
 }
 
@@ -23,7 +24,6 @@
   text-align: center;
   max-width: 500px;
   margin: 0 1.5rem;
-  // white-space: pre-wrap;
 
   h1,
   p {

@@ -3,8 +3,15 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
-    description: `Resume`,
-    author: `@alexanderchabo`,
+    author: `Alexander Chabo`,
+    description: `Personal website by Alexander Chabo`,
+    siteUrl: 'https://alexanderchabo.com',
+    social: {
+      github: 'https://github.com/alexanderchabo',
+      linkedIn: 'https://www.linkedin.com/in/alexanderchabo/',
+      facebook: 'https://www.facebook.com/alexanderchabo',
+      email: 'mailto:alexander.chabo@gmail.com'
+    },
     menuLinks: [
       {
         name: 'about',
@@ -15,12 +22,6 @@ module.exports = {
         link: '/contact'
       }
     ],
-    social: {
-      github: 'https://github.com/alexanderchabo',
-      linkedIn: 'https://www.linkedin.com/in/alexanderchabo/',
-      facebook: 'https://www.facebook.com/alexanderchabo',
-      email: 'mailto:alexander.chabo@gmail.com'
-    }
   },
   plugins: [
     {
@@ -39,6 +40,12 @@ module.exports = {
         path: path.join(__dirname, 'static/assets'),
         name: 'assets'
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-144107183-1`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -82,6 +89,19 @@ module.exports = {
           include: /assets/
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Alexander Chabo`,
+        short_name: `Alexander Chabo`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffa7c4`,
+        display: `minimal-ui`,
+        icon: `src/assets/icons/icon.png`,
+        theme_color_in_head: false,
+      },
+    },
   ]
 };

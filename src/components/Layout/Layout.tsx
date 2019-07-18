@@ -10,13 +10,20 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <>
+  <div
+    style={{
+      color: 'var(--textNormal)',
+      background: 'var(--bg)',
+      transition: 'color 0.2s ease-out, background 0.2s ease-out',
+      minHeight: '100vh'
+    }}
+  >
     <Header />
     {/* <PageTransition> */}
     <main>{children}</main>
     <Footer />
     {/* </PageTransition> */}
-  </>
+  </div>
 );
 
 export default Layout;
