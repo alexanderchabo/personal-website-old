@@ -72,7 +72,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title={`Hi! I'm Alexander 🦠`}
+        title={`Hi, I'm Alex 🦠`}
         subTitle="An organism that turns caffeine into software"
       />
       <Fade bottom delay={500}>
