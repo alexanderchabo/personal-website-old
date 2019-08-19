@@ -12,16 +12,6 @@ module.exports = {
       facebook: 'https://www.facebook.com/alexanderchabo',
       email: 'mailto:alexander.chabo@gmail.com'
     },
-    menuLinks: [
-      {
-        name: 'about',
-        link: '/about'
-      },
-      {
-        name: 'contact',
-        link: '/contact'
-      }
-    ],
   },
   plugins: [
     {

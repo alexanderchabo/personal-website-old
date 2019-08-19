@@ -32,17 +32,8 @@ class Header extends React.Component<any, any> {
           <PageContainer>
             <div className={styles.header}>
               <h2 className={styles.h2}>
-                <Link to="/about">{'AC'}</Link>
+                <Link to="/">{'AC'}</Link>
               </h2>
-              {/* <nav className={styles.nav}>
-              <ul>
-                {menuLinks.map(link => (
-                  <li key={link.name}>
-                    <Link to={link.link}>{link.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav> */}
               {this.state.theme !== null ? (
                 <Toggle
                   icons={{

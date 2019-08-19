@@ -18,7 +18,6 @@ interface StaticQuery {
       title: string;
       description: string;
       author: string;
-      menuLinks: MenuLink[];
       social: Social;
     };
   };
@@ -31,10 +30,6 @@ const Query = graphql`
         title
         description
         author
-        menuLinks {
-          name
-          link
-        }
         social {
           github
           linkedIn
