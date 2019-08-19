@@ -16,7 +16,6 @@ interface HeroBannerProps {
 const useStyles = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(4),
-    color: 'var(--textNormal)',
   },
   input: {
     display: 'none',
@@ -36,7 +35,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     <div className={styles.heroBannerBody}>
       <h1>{title}</h1>
       {subTitle && <p>{subTitle}</p>}
-      {cta && ctaLink && <Button href={ctaLink} className={classes.button}>{cta}</Button>}
+      {cta && ctaLink && <Button style={{
+        backgroundColor: "var(--bg",
+    }} href={ctaLink} variant="contained" className={classes.button}>{cta}</Button>}
     </div>
   );
 

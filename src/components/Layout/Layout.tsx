@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
   <div
     style={{
       color: 'var(--textNormal)',
-      background: 'var(--bg)',
+      backgroundColor: 'var(--bg)',
       transition: 'color 0.2s ease-out, background 0.2s ease-out',
       minHeight: '100vh'
     }}

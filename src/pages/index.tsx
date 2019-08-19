@@ -72,7 +72,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title={`Hi! I'm Alexander`}
+        title={`Hi! I'm Alexander 🦠`}
         subTitle="An organism that turns caffeine into software"
       />
       <Fade bottom delay={500}>
@@ -98,7 +98,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
     </section>
 
     <section>
-      <HeroBanner title="Work" subTitle="Wearer of many hats" />
+      <HeroBanner title="Work 👨🏻‍💻" subTitle="Wearer of many hats" />
       <PageContainer>
         <VerticalTimeLine
           type="work"
@@ -113,7 +113,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
     </section>
 
     <section>
-      <HeroBanner title="Education" subTitle="The math is strong in this one" />
+      <HeroBanner title="Education 📚" subTitle="The math is strong in this one" />
       <PageContainer>
         <VerticalTimeLine
           type="education"
@@ -131,9 +131,9 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title="Wanna get in touch?"
-        // subTitle="You can contact me below or through one of the social platforms in the footer"
-        cta="contact me"
+        title="Please say hi! 👋🏻"
+        subTitle="Always happy to chat over a coffee or the world wide web"
+        cta="Contact"
         ctaLink="mailto:alexander.chabo@gmail.com"
       />
     </section>
