@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import GithubIcon from 'assets/icons/github.svg';
-import LinkedinIcon from 'assets/icons/linkedin.svg';
-import MessengerIcon from 'assets/icons/messenger.svg';
+import GithubIcon from 'assets/svgs/github.svg';
+import LinkedinIcon from 'assets/svgs/linkedin.svg';
+import MessengerIcon from 'assets/svgs/messenger.svg';
 
 type IconType = 'github' | 'messenger' | 'instagram' | 'linkedin' | 'skype';
 

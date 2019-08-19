@@ -89,9 +89,9 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /svgs/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -102,7 +102,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
-        icon: `src/assets/icons/icon.png`,
+        icon: `src/assets/images/icon.png`,
         theme_color_in_head: false,
       },
     },

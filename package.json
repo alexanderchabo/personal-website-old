@@ -7,7 +7,6 @@
   "dependencies": {
     "@types/react-headroom": "^2.2.1",
     "@types/react-helmet": "^5.0.8",
-    "@types/react-toggle": "^4.0.2",
     "add": "^2.0.6",
     "classnames": "^2.2.6",
     "gatsby": "^2.13.27",
@@ -36,7 +35,6 @@
     "react-helmet": "^5.2.1",
     "react-reveal": "^1.2.2",
     "react-social-icons": "^4.1.0",
-    "react-toggle": "^4.0.2",
     "react-typography": "^0.16.19",
     "react-vertical-timeline-component": "^2.4.0",
     "rebass": "^3.1.1",
