@@ -11,7 +11,7 @@ module.exports = {
       linkedIn: 'https://www.linkedin.com/in/alexanderchabo/',
       facebook: 'https://www.facebook.com/alexanderchabo',
       email: 'mailto:alexander.chabo@gmail.com'
-    },
+    }
   },
   plugins: [
     {
@@ -32,19 +32,17 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-145862554-1`,
-        head: true,
-        respectDNT: true,
-        pageTransitionDelay: 0,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
         path: path.join(__dirname, 'src/pages')
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-145862554-1`,
+        head: true,
       }
     },
     `gatsby-transformer-sharp`,
@@ -79,9 +77,9 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /svgs/,
-        },
-      },
+          include: /svgs/
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -93,8 +91,8 @@ module.exports = {
         theme_color: `#ffa7c4`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`,
-        theme_color_in_head: false,
-      },
-    },
+        theme_color_in_head: false
+      }
+    }
   ]
 };
