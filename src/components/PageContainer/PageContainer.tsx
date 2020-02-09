@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 
 // Styles
-import * as styles from './PageContainer.module.scss';
+import * as styles from "./PageContainer.module.scss";
 
 interface PageContainerProps {
   children: any;

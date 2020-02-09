@@ -4,6 +4,7 @@ body {
 }
 
 body.light {
+  --logoFilter: initial;
   --bg: #f3f3f3;
   --header: var(--pink);
   --headerBg: #f7cf80;
@@ -18,6 +19,7 @@ body.light {
 }
 
 body.dark {
+  --logoFilter: brightness(0) invert(1);
   -webkit-font-smoothing: antialiased;
   --bg: #282c35;
   --header: #ffffff;

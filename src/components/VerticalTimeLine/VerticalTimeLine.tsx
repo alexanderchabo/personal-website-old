@@ -1,38 +1,42 @@
-import * as React from 'react';
-import Img, { FixedObject } from 'gatsby-image';
+import * as React from "react";
+import Img, { FixedObject } from "gatsby-image";
 import {
   VerticalTimeline as VerticalTimelineBase,
   VerticalTimelineElement
-} from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-
-// Components
-import Icon from 'components/Icon/Icon';
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { Document } from "@contentful/rich-text-types";
+import classnames from "classnames";
 
 // Utils
-import { mapDatesToString } from 'utils/dateFormatter';
+import { richTextFormatter } from "src/utils/textFormatter";
 
 // Styles
-import * as styles from './VerticalTimeLine.module.scss';
-
-interface Date {
-  month?: number;
-  year?: number;
-}
+import * as styles from "./VerticalTimeLine.module.scss";
 
 interface Event {
-  startDate: Date;
-  endDate: Date;
-  location?: string;
+  dateStarted: string;
+  dateEnded: string;
+  location: string;
   title: string;
   subTitle: string;
-  summary?: string;
-  logo: FixedObject;
+  summary: {
+    json: Document;
+  };
+  logo: Logo;
+}
+
+interface Logo {
+  fixed?: FixedObject;
+  file: {
+    contentType: string;
+    url: string;
+  };
 }
 
 interface VerticalTimeLineProps {
   events: Event[];
-  type: 'work' | 'education';
+  type: "work" | "education";
 }
 
 const VerticalTimeLine: React.FC<VerticalTimeLineProps> = ({
@@ -45,27 +49,33 @@ const VerticalTimeLine: React.FC<VerticalTimeLineProps> = ({
         title,
         subTitle,
         summary,
-        startDate,
-        endDate,
+        dateStarted,
+        dateEnded,
         location,
         logo
       }: Event) => (
         <VerticalTimelineElement
+          key={title}
           className={`vertical-timeline-element--${type}`}
-          date={`${mapDatesToString(startDate, endDate)}\n${location}`}
-          // iconStyle={{
-          //   background: window.__theme == "light" ? 'rgb(0, 60, 200)' : 'rgb(0, 0, 0)',
-          //   color: '#fff'
-          // }}
+          date={`${dateStarted} to ${
+            dateEnded ? dateEnded : "present"
+          }\n${location}`}
         >
-          {logo && <Img className={styles.logo} fixed={logo} />}
-          <h3 className='vertical-timeline-element-title'>{title}</h3>
-          <h4 className='vertical-timeline-element-subtitle'>{subTitle}</h4>
-          <p>{summary}</p>
+          {logo && handleLogo(logo)}
+          <h3 className="vertical-timeline-element-title">{title}</h3>
+          <h4 className="vertical-timeline-element-subtitle">{subTitle}</h4>
+          {summary && richTextFormatter(summary.json)}
         </VerticalTimelineElement>
       )
     )}
   </VerticalTimelineBase>
 );
+
+const handleLogo = (logo: Logo) =>
+  logo.file.contentType === "image/svg+xml" ? (
+    <img className={styles.logo} src={logo.file.url} width="200" />
+  ) : (
+    <Img className={styles.logo} fixed={logo.fixed} />
+  );
 
 export default VerticalTimeLine;

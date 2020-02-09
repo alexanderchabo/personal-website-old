@@ -1,5 +1,7 @@
 const path = require('path');
 
+require("dotenv");
+
 module.exports = {
   siteMetadata: {
     title: `Alexander Chabo`,
@@ -27,21 +29,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: path.join(__dirname, 'static/assets'),
-        name: 'assets'
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `pages`,
         path: path.join(__dirname, 'src/pages')
       }
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-145862554-1`,
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
       }
     },
@@ -62,11 +64,10 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
-    `gatsby-v2-plugin-page-transitions`,
+    `gatsby-plugin-tslint`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

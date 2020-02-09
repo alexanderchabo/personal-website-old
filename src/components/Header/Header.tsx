@@ -1,21 +1,21 @@
-import * as React from 'react';
-import Headroom from 'react-headroom';
+import * as React from "react";
+import Headroom from "react-headroom";
 
 // Components
-import PageContainer from 'components/PageContainer/PageContainer';
-import Link from 'components/Link/Link';
-import Toggle from 'src/components/Toggle/Toggle';
+import PageContainer from "components/PageContainer/PageContainer";
+import Link from "components/Link/Link";
+import Toggle from "src/components/Toggle/Toggle";
 
 // Icons
-import sun from 'assets/images/sun.png';
-import moon from 'assets/images/moon.png';
+import sun from "assets/images/sun.png";
+import moon from "assets/images/moon.png";
 
 // Styles
-import * as styles from './Header.module.scss';
+import * as styles from "./Header.module.scss";
 
 class Header extends React.Component<any, any> {
   state = {
-    theme: null,
+    theme: null
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ class Header extends React.Component<any, any> {
           <PageContainer>
             <div className={styles.header}>
               <h2 className={styles.h2}>
-                <Link to="/">{'AC'}</Link>
+                <Link to="/">{"AC"}</Link>
               </h2>
               {this.state.theme !== null ? (
                 <Toggle
@@ -43,7 +43,7 @@ class Header extends React.Component<any, any> {
                         width="16"
                         height="16"
                         role="presentation"
-                        style={{ pointerEvents: 'none' }}
+                        style={{ pointerEvents: "none" }}
                       />
                     ),
                     unchecked: (
@@ -52,19 +52,19 @@ class Header extends React.Component<any, any> {
                         width="16"
                         height="16"
                         role="presentation"
-                        style={{ pointerEvents: 'none' }}
+                        style={{ pointerEvents: "none" }}
                       />
                     )
                   }}
-                  checked={this.state.theme === 'dark'}
+                  checked={this.state.theme === "dark"}
                   onChange={e =>
                     window.__setPreferredTheme(
-                      e.target.checked ? 'dark' : 'light'
+                      e.target.checked ? "dark" : "light"
                     )
                   }
                 />
               ) : (
-                <div style={{ height: '24px' }} />
+                <div style={{ height: "24px" }} />
               )}
             </div>
           </PageContainer>
