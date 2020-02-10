@@ -70,6 +70,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-tslint`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
