@@ -53,13 +53,21 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "env": "sync-dotenv"
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5",
     "gatsby-plugin-tslint": "^0.0.2",
+    "husky": "^4.2.1",
     "prettier": "^1.19.1",
+    "sync-dotenv": "^2.4.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run env"
+    }
   }
 }
