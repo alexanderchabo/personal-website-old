@@ -43,7 +43,7 @@
     "typescript": "3.5.3",
     "typography": "0.16.19",
     "typography-theme-fairy-gates": "0.16.19",
-    "yarn": "1.17.3"
+    "yarn": "1.22.0"
   },
   "keywords": [
     "gatsby"
