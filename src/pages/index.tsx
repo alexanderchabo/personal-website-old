@@ -67,27 +67,25 @@ const Index: React.FC<IndexProps> = ({ data }) => (
       <HeroBanner
         title={`Hi, I'm Alex 🦠`}
         subTitle="An organism that turns caffeine into software"
+        disableFadeIn={true}
       />
-      <Fade bottom delay={500}>
-        <p
-          style={{
-            padding: "20px",
-            textAlign: "center",
-            margin: "0 auto",
-            height: "40vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center"
-          }}
-        >
-          <span>Born and raised in 🇸🇪</span>
-          <span>Relocated in april 2018 to 🇨🇦</span>
-          <br />
-          <span>
-            Doing what I love most: <b>Product Development!</b>
-          </span>
-        </p>
-      </Fade>
+      <p
+        style={{
+          padding: "20px",
+          textAlign: "center",
+          margin: "0 auto",
+          height: "40vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center"
+        }}
+      >
+        <span>Born and raised in Sweden 🇸🇪</span>
+        <span>Relocated in april 2018 to Canada 🇨🇦</span>
+        <br /> <br />
+        <span>Doing what I love most:</span>
+        <b>Product development</b>
+      </p>
     </section>
 
     <section>
