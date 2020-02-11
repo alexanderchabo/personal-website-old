@@ -27,21 +27,13 @@
       white-space: pre-wrap;
     }
 
-    .vertical-timeline-element-content::before {
-      transition: border-color 0.2s ease-out;
-    }
-
-    .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
-      border-right-color: var(--cardBg);
-    }
-
-    .vertical-timeline-element:nth-child(odd):not(.vertical-timeline-element--left  ) .vertical-timeline-element-content::before {
-      border-left-color: var(--cardBg);
-    }
-
-
     .vertical-timeline-element-content * {
       color: var(--normalText);
+    }
+
+    .vertical-timeline-element-content-arrow {
+      transition: border-color 0.2s ease-out;
+      border-right-color: var(--cardBg);
     }
 
     .vertical-timeline-element-icon {
@@ -54,5 +46,6 @@
 
 .logo {
   margin-bottom: 1rem;
+  transition: filter 0.2s ease-out;
   filter: var(--logoFilter);
 }
