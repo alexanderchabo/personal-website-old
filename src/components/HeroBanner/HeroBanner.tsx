@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 
 import * as styles from "./HeroBanner.module.scss";
+import classnames from "classnames";
 
 interface HeroBannerProps {
   title: string;
@@ -11,6 +12,7 @@ interface HeroBannerProps {
   disableFadeIn?: boolean;
   cta?: string;
   ctaLink?: string;
+  isFullHeight?: boolean;
 }
 
 const useStyles = makeStyles(theme => ({
@@ -27,7 +29,8 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   subTitle,
   cta = "",
   ctaLink = "",
-  disableFadeIn = false
+  disableFadeIn = false,
+  isFullHeight = false
 }) => {
   const classes = useStyles({});
 
@@ -51,7 +54,11 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   );
 
   return (
-    <div className={styles.heroBanner}>
+    <div
+      className={classnames(styles.heroBanner, {
+        [styles.fullHeight]: isFullHeight
+      })}
+    >
       <div className={styles.container}>
         {disableFadeIn ? body : <Fade top={true}>{body}</Fade>}
       </div>

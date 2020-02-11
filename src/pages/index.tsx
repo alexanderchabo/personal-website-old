@@ -68,6 +68,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
         title={`Hi, I'm Alex 🦠`}
         subTitle="An organism that turns caffeine into software"
         disableFadeIn={true}
+        isFullHeight={true}
       />
       <p
         style={{

@@ -5,6 +5,18 @@
   height: 50vh;
   width: 100%;
   overflow: hidden;
+
+  // TODO: fix ugly conditiionals
+  &.fullHeight {
+    height: calc(100vh - 79px);
+
+    @media (min-width: 481px) {
+      height: calc(100vh - 93px);
+    }
+    @media (min-width: 751px) {
+      height: calc(100vh - 113px);
+    }
+  }
 }
 
 .container {
