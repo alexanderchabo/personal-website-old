@@ -25,10 +25,13 @@ class Header extends React.Component<any, any> {
     };
   }
 
+  handleOnChange = event =>
+    window.__setPreferredTheme(event.target.checked ? "dark" : "light");
+
   render() {
     return (
       <header>
-        <Headroom disableInlineStyles>
+        <Headroom disableInlineStyles={true}>
           <PageContainer>
             <div className={styles.header}>
               <h2 className={styles.h2}>
@@ -57,11 +60,7 @@ class Header extends React.Component<any, any> {
                     )
                   }}
                   checked={this.state.theme === "dark"}
-                  onChange={e =>
-                    window.__setPreferredTheme(
-                      e.target.checked ? "dark" : "light"
-                    )
-                  }
+                  onChange={this.handleOnChange}
                 />
               ) : (
                 <div style={{ height: "24px" }} />

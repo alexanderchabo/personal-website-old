@@ -12,7 +12,7 @@ const Contact = () => (
     <SEO title="Contact" />
     <HeroBanner title="Say Hi!" subTitle="It never hurts to be friendly" />
     <PageContainer>
-      <Fade bottom delay={500}>
+      <Fade bottom={true} delay={500}>
         <p
           style={{
             maxWidth: "500px",
