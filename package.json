@@ -59,7 +59,7 @@
   "devDependencies": {
     "gatsby-plugin-root-import": "2.0.5",
     "gatsby-plugin-tslint": "0.0.2",
-    "husky": "4.2.1",
+    "husky": "4.2.3",
     "prettier": "1.19.1",
     "sync-dotenv": "2.4.0",
     "tslint-loader": "3.5.4",
