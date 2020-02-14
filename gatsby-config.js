@@ -24,8 +24,8 @@ module.exports = {
         prodKey: process.env.SEGMENT_PRODUCTION_WRITE_KEY,
         devKey: process.env.SEGMENT_DEV_WRITE_KEY,
         trackPage: true,
-        delayLoad: true,
-        delayLoadTime: 1000
+        // delayLoad: false,
+        // delayLoadTime: 1000
       }
     },
     {
