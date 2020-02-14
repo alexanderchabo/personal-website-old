@@ -54,7 +54,7 @@ const VerticalTimeLine: React.FC<VerticalTimeLineProps> = ({
         logo
       }: Event) => (
         <VerticalTimelineElement
-          key={title}
+          key={`${title}--${subTitle}`}
           className={`vertical-timeline-element--${type}`}
           date={`${dateStarted} to ${
             dateEnded ? dateEnded : "present"
