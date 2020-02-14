@@ -97,6 +97,7 @@ module.exports = {
         icon: `src/assets/images/icon.png`,
         theme_color_in_head: false
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 };
