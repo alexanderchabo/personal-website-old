@@ -19,12 +19,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: `gatsby-plugin-segment-js`,
       options: {
-        id: process.env.GOOGLE_TAGMANAGER_ID,
-        includeInDevelopment: false,
-        defaultDataLayer: { platform: "gatsby" },
-      },
+        prodKey: process.env.SEGMENT_PRODUCTION_WRITE_KEY,
+        devKey: process.env.SEGMENT_DEV_WRITE_KEY,
+        trackPage: true,
+      }
     },
     {
       resolve: `gatsby-plugin-root-import`,
