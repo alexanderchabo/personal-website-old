@@ -52,23 +52,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-relative-images-v2`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 930,
-              backgroundColor: 'transparent'
-            }
-          }
-        ]
-      }
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
