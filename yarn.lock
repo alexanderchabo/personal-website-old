@@ -809,10 +809,10 @@
   dependencies:
     "@contentful/rich-text-types" "^13.4.0"
 
-"@contentful/rich-text-types@14.0.1":
-  version "14.0.1"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.0.1.tgz#b9751a8f7ce5a2056bd74b6c352b0a0ec683ce39"
-  integrity sha512-pZnXkK41UgOuH8s1o4Y1oOd5ZcmaoBfF3aHkIyW812opFtxiiPFRIwUlC28Bz/i4j/qu8AlPHr7EPN0hiv1LiQ==
+"@contentful/rich-text-types@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-14.1.0.tgz#e76938005e59fafb5da353646393fcd354ed4d64"
+  integrity sha512-dqb9U+eMthGl8wJhOM5PGV0MOLxFNMJjMgVU600uHJ4Z4u39iXpdFR1VXbaownuvhJyR+9V+VLEFXNZJ1veGZg==
 
 "@contentful/rich-text-types@^13.4.0":
   version "13.4.0"
