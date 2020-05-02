@@ -2,19 +2,22 @@
   position: relative;
   background-color: var(--headerBg);
   transition: background-color 0.2s ease-out;
-  height: 50vh;
+  min-height: 50vh;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   // TODO: fix ugly conditiionals
   &.fullHeight {
-    height: calc(100vh - 79px);
+    min-height: calc(100vh - 79px);
 
     @media (min-width: 481px) {
-      height: calc(100vh - 93px);
+      min-height: calc(100vh - 93px);
     }
     @media (min-width: 751px) {
-      height: calc(100vh - 113px);
+      min-height: calc(100vh - 113px);
     }
   }
 }
@@ -27,6 +30,8 @@
   height: 100%;
   position: relative;
   z-index: 2;
+  padding: 1.5rem;
+
   * {
     color: var(--textNormal);
   }
@@ -35,7 +40,6 @@
 .heroBannerBody {
   text-align: center;
   max-width: 400px;
-  margin: 0 1.5rem;
 
   h1 {
     padding-left: 0.25rem;

@@ -13,15 +13,16 @@ interface HeroBannerProps {
   cta?: string;
   ctaLink?: string;
   isFullHeight?: boolean;
+  img?: any;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   button: {
-    marginTop: theme.spacing(4)
+    marginTop: theme.spacing(4),
   },
   input: {
-    display: "none"
-  }
+    display: "none",
+  },
 }));
 
 const HeroBanner: React.FC<HeroBannerProps> = ({
@@ -30,18 +31,22 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   cta = "",
   ctaLink = "",
   disableFadeIn = false,
-  isFullHeight = false
+  isFullHeight = false,
+  img,
 }) => {
   const classes = useStyles({});
 
+  const maxSize = isFullHeight ? "100%" : "12rem"
+
   const body = (
     <div className={styles.heroBannerBody}>
+      {img && <img style={{ margin: "1rem", maxWidth: maxSize, maxHeight: maxSize }} src={img} />}
       <h1>{title}</h1>
       {subTitle && <p>{subTitle}</p>}
       {cta && ctaLink && (
         <Button
           style={{
-            backgroundColor: "var(--bg"
+            backgroundColor: "var(--bg",
           }}
           href={ctaLink}
           variant="contained"
@@ -56,7 +61,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   return (
     <div
       className={classnames(styles.heroBanner, {
-        [styles.fullHeight]: isFullHeight
+        [styles.fullHeight]: isFullHeight,
       })}
     >
       <div className={styles.container}>

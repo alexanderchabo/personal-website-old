@@ -16,10 +16,20 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <PageContainer>
-        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>,{" "}
-        <a href="https://reactjs.org/">React</a> and ❤️. Hosted on{" "}
-        <a href="https://www.netlify.com/">Netlify</a>. The code is open source
-        and available at{" "}
+        Built with:
+        <br/>
+
+        <a href="https://www.gatsbyjs.org">Gatsby</a>,{" "}
+        <a href="https://reactjs.org/">React</a>,{" "}
+        <a href="https://www.contentful.com/">Contentful</a>,{" "}
+        <a href="https://www.netlify.com/">Netlify</a>,{" "}
+        <a href="https://www.bitmoji.com/">Bitmojis</a>, and ❤️
+
+        <br/>
+        <br/>
+
+        The code is open source and available at
+        {" "}
         <a href="https://github.com/alexanderchabo/alexanderchabo">Github</a>.
         <div className={styles.socialBar}>
           {Object.values(social).map(key => (

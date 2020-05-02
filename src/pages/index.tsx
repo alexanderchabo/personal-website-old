@@ -11,6 +11,12 @@ import VerticalTimeLine from "components/VerticalTimeLine/VerticalTimeLine";
 import HeroBanner from "components/HeroBanner/HeroBanner";
 import PageContainer from "components/PageContainer/PageContainer";
 
+// Images
+import hello from "assets/images/hello.png";
+import work from "assets/images/work.png";
+import education from "assets/images/education.png";
+import contact from "assets/images/contact.png";
+
 interface Event {
   dateStarted: string;
   dateEnded: string;
@@ -65,10 +71,11 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title={`Hi, I'm Alex 🦠`}
+        title={`I'm Alex!`}
         subTitle="An organism that turns caffeine into software"
         disableFadeIn={true}
         isFullHeight={true}
+        img={hello}
       />
       <p
         style={{
@@ -90,7 +97,9 @@ const Index: React.FC<IndexProps> = ({ data }) => (
     </section>
 
     <section>
-      <HeroBanner title="Work 👨🏻‍💻" subTitle="Wearer of many hats" />
+      <HeroBanner title="Work" subTitle="Wearer of many hats"
+      img={work}
+      />
       <PageContainer>
         <VerticalTimeLine
           type="work"
@@ -107,8 +116,9 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title="Education 📚"
+        title="Education"
         subTitle="The math is strong in this one"
+        img={education}
       />
       <PageContainer>
         <VerticalTimeLine
@@ -126,10 +136,11 @@ const Index: React.FC<IndexProps> = ({ data }) => (
 
     <section>
       <HeroBanner
-        title="Please say hi! 👋🏻"
+        title="Want to connect?"
         subTitle="Always happy to chat over a coffee or the world wide web"
         cta="Contact"
         ctaLink="mailto:alexander.chabo@gmail.com"
+        img={contact}
       />
     </section>
   </Layout>
