@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
       color: "var(--textNormal)",
       backgroundColor: "var(--bg)",
       transition: "color 0.2s ease-out, background 0.2s ease-out",
-      minHeight: "100vh"
+      minHeight: "100vh",
     }}
   >
     <Header />
