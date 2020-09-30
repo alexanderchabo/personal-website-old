@@ -18,10 +18,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => (
     }}
   >
     <Header />
-    {/* <PageTransition> */}
     <main>{children}</main>
     <Footer />
-    {/* </PageTransition> */}
   </div>
 );
 
