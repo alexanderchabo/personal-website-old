@@ -57,6 +57,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
