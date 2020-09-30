@@ -13,64 +13,56 @@ import moon from "assets/images/moon.png";
 // Styles
 import * as styles from "./Header.module.scss";
 
-class Header extends React.Component<any, any> {
-  state = {
-    theme: null
-  };
+// Utils
+import { useDarkMode } from "src/utils/useDarkMode";
 
-  componentDidMount() {
-    this.setState({ theme: window.__theme });
-    window.__onThemeChange = () => {
-      this.setState({ theme: window.__theme });
-    };
-  }
+const Header: React.FC = () => {
+  const [theme, setTheme] = useDarkMode();
 
-  handleOnChange = event =>
-    window.__setPreferredTheme(event.target.checked ? "dark" : "light");
+  const handleOnChange = (event) =>
+    setTheme(event.target.checked ? "dark" : "light");
 
-  render() {
-    return (
-      <header>
-        <Headroom disableInlineStyles={true}>
-          <PageContainer>
-            <div className={styles.header}>
-              <h2 className={styles.h2}>
-                <Link to="/">{"AC"}</Link>
-              </h2>
-              {this.state.theme !== null ? (
-                <Toggle
-                  icons={{
-                    checked: (
-                      <img
-                        src={moon}
-                        width="16"
-                        height="16"
-                        role="presentation"
-                        style={{ pointerEvents: "none" }}
-                      />
-                    ),
-                    unchecked: (
-                      <img
-                        src={sun}
-                        width="16"
-                        height="16"
-                        role="presentation"
-                        style={{ pointerEvents: "none" }}
-                      />
-                    )
-                  }}
-                  checked={this.state.theme === "dark"}
-                  onChange={this.handleOnChange}
-                />
-              ) : (
-                <div style={{ height: "24px" }} />
-              )}
-            </div>
-          </PageContainer>
-        </Headroom>
-      </header>
-    );
-  }
-}
+  return (
+    <header>
+      <Headroom disableInlineStyles={true}>
+        <PageContainer>
+          <div className={styles.header}>
+            <h2 className={styles.h2}>
+              <Link to="/">{"AC"}</Link>
+            </h2>
+            {theme ? (
+              <Toggle
+                icons={{
+                  checked: (
+                    <img
+                      src={moon}
+                      width="16"
+                      height="16"
+                      role="presentation"
+                      style={{ pointerEvents: "none" }}
+                    />
+                  ),
+                  unchecked: (
+                    <img
+                      src={sun}
+                      width="16"
+                      height="16"
+                      role="presentation"
+                      style={{ pointerEvents: "none" }}
+                    />
+                  ),
+                }}
+                checked={theme === "dark"}
+                onChange={handleOnChange}
+              />
+            ) : (
+              <div style={{ height: "24px" }} />
+            )}
+          </div>
+        </PageContainer>
+      </Headroom>
+    </header>
+  );
+};
 
 export default Header;
