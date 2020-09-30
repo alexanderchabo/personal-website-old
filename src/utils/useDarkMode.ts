@@ -1,28 +1,31 @@
 import * as React from "react";
 
-type Theme = 'dark' | 'light';
+type Theme = "dark" | "light";
 
 export const useDarkMode = () => {
-  const [theme, setTheme] = React.useState<Theme>(getInitialValue())
+  const [theme, setTheme] = React.useState<Theme>(
+    typeof window !== "undefined" ? getInitialTheme() : "light"
+  );
 
   React.useEffect(() => {
     document.body.className = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  function getInitialValue() {
-    const localTheme = window.localStorage.getItem('theme') as Theme
+  function getInitialTheme() {
+    const localTheme = localStorage.getItem("theme") as Theme;
 
     if (localTheme) {
       return localTheme;
-    };
-
-    if (window && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    };
-
-    return 'light'
+    } else if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark";
+    } else {
+      return "light";
+    }
   }
 
-  return [theme, setTheme] as const
-}
+  return [theme, setTheme] as const;
+};
