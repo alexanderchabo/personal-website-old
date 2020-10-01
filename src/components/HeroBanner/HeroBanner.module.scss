@@ -8,15 +8,11 @@
   align-items: center;
   justify-content: center;
 
-  // TODO: fix ugly conditiionals
   &.fullHeight {
-    min-height: calc(100vh - 79px);
+    min-height: calc(100vh - 93px);
 
-    @media (min-width: 481px) {
-      min-height: calc(100vh - 93px);
-    }
-    @media (min-width: 751px) {
-      min-height: calc(100vh - 113px);
+    @media (min-width: 1000px) {
+      min-height: 100vh;
     }
   }
 }

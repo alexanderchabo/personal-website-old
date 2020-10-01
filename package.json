@@ -39,6 +39,7 @@
     "typescript": "4.0.3",
     "typography": "0.16.19",
     "typography-theme-fairy-gates": "0.16.19",
+    "use-resize-observer": "^6.1.0",
     "yarn": "1.22.10"
   },
   "keywords": [

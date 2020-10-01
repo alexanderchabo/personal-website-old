@@ -1,3 +1,17 @@
+
+.fixToLeft {
+  position: fixed;
+  left: 0;
+  width: calc(var(--sidenavWidth) - var(--sidenavMargin)*2);
+  border-right: 1px solid var(--border);
+  margin: var(--sidenavMargin);
+  height: calc(100% - var(--sidenavMargin)*2);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 :global {
   .headroom {
     top: 0;
@@ -6,6 +20,9 @@
     z-index: 10;
     transition: background-color 0.2s ease-out, box-shadow 200ms ease-out;
     box-shadow: none;
+    @media (max-width: 1000px) {
+      padding: 1.5rem;
+    }
   }
 
   .headroom--unfixed {
@@ -69,7 +86,7 @@
     transition: transform 0.3s ease;
   }
 
-  @media (min-width: 770px) {
+  @media (min-width: 1000px) {
     :hover:after {
       transform: rotate(90deg) scale(1.1);
     }
