@@ -1,12 +1,8 @@
 :root {
   -webkit-font-smoothing: antialiased;
-  --pink: rgb(255, 167, 196);
   --logoFilter: initial;
   --bg: #e4e4e4;
-  --header: var(--pink);
-  --headerBg: #f7cf80;
   --textNormal: #222;
-  --textTitle: #222;
   --textLink: #003cc8;
   --cardBg: #ffffff;
   --cardBorderShadow: rgb(165, 165, 165);
@@ -18,20 +14,18 @@
 @media ( prefers-color-scheme: dark ) {
   :root {
     --logoFilter: brightness(0) invert(1);
-    --bg: #282c35;
-    --header: #ffffff;
-    --headerBg: #14151a;
+    --bg: #000000;
     --textNormal: rgba(255, 255, 255, 0.88);
-    --textTitle: #ffffff;
-    --textLink: var(--pink);
-    --cardBg: var(--headerBg);
-    --cardBorderShadow: rgb(0, 0, 0);
-    --cardCircleBoxShadow: var(--headerBg);
-    --cardCircleBg: var(--headerBg);
+    --textLink: rgb(255, 167, 196);
+    --cardBg: #14151a;
+    --cardBorderShadow: #000000;
+    --cardCircleBoxShadow: var(--cardBg);
+    --cardCircleBg: var(--cardBg);
     --hr: hsla(0, 0%, 100%, 0.2);
   }
 }
 
 body {
   background-color: var(--bg);
+  color: var(--textNormal);
 }

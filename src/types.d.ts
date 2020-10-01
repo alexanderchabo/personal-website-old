@@ -1,5 +1,3 @@
-declare module 'react-reveal';
-
 declare module '*.svg';
 declare module '*.png';
 

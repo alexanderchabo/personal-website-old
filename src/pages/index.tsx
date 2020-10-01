@@ -1,7 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { FixedObject } from "gatsby-image";
-import { Fade } from "react-reveal";
 import { Document } from "@contentful/rich-text-types";
 
 // Components
@@ -73,7 +72,6 @@ const Index: React.FC<IndexProps> = ({ data }) => (
       <HeroBanner
         title={`I'm Alex!`}
         subTitle="An organism that turns caffeine into software"
-        disableFadeIn={true}
         isFullHeight={true}
         img={hello}
       />
@@ -85,7 +83,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
           height: "40vh",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
         <span>Born and raised in Sweden 🇸🇪</span>
@@ -97,9 +95,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
     </section>
 
     <section>
-      <HeroBanner title="Work" subTitle="Wearer of many hats"
-      img={work}
-      />
+      <HeroBanner title="Work" subTitle="Wearer of many hats" img={work} />
       <PageContainer>
         <VerticalTimeLine
           type="work"
@@ -108,7 +104,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
             title: node.position,
             subTitle: node.company,
             logo: node.logo,
-            summary: node.summary
+            summary: node.summary,
           }))}
         />
       </PageContainer>
@@ -128,7 +124,7 @@ const Index: React.FC<IndexProps> = ({ data }) => (
             title: node.institution,
             subTitle: node.studyType + " in " + node.area,
             logo: node.logo,
-            summary: node.summary
+            summary: node.summary,
           }))}
         />
       </PageContainer>
