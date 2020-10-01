@@ -6,9 +6,8 @@ interface MenuLink {
 }
 
 interface Social {
-  github: string;
   linkedIn: string;
-  facebook: string;
+  github: string;
   email: string;
 }
 
@@ -31,9 +30,8 @@ const Query = graphql`
         description
         author
         social {
-          github
           linkedIn
-          facebook
+          github
           email
         }
       }

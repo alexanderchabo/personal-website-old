@@ -1,21 +1,3 @@
 .footer {
   text-align: center;
 }
-
-.socialBar {
-  padding-top: 2rem;
-
-  a:not(:first-child) {
-    margin-left: 0.5rem;
-  }
-}
-
-:global {
-  .social-svg {
-    transition: background-color 0.3s ease;
-  }
-
-  .social-svg:hover {
-    background-color: white;
-  }
-}

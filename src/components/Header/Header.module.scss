@@ -107,3 +107,25 @@
     }
   }
 }
+
+.socialBar {
+  margin-left: -0.8rem;
+}
+
+.icon {
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  &:hover :global .social-svg-icon {
+    fill: var(--textLink) !important;
+  }
+
+  :global .social-svg-mask {
+    fill: none !important;
+  }
+
+  :global .social-svg-icon {
+    fill: var(--textNormal) !important;
+  }
+}

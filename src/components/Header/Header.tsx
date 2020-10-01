@@ -26,9 +26,7 @@ const Header: React.FC = () => {
             <SocialIcon
               key={key}
               className={styles.icon}
-              bgColor="gray"
               url={key}
-              style={{ height: 40, width: 40 }}
             />
           ))}
         </div>

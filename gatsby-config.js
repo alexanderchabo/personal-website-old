@@ -11,9 +11,8 @@ module.exports = {
     description: `Personal website by Alexander Chabo`,
     siteUrl: 'https://alexanderchabo.com',
     social: {
-      github: 'https://github.com/alexanderchabo',
       linkedIn: 'https://www.linkedin.com/in/alexanderchabo/',
-      facebook: 'https://www.facebook.com/alexanderchabo',
+      github: 'https://github.com/alexanderchabo',
       email: 'mailto:alexander.chabo@gmail.com'
     }
   },
