@@ -3,8 +3,9 @@
 
   &:before {
     :global {
-      background-color: var(--cardCircleBoxShadow);
-      transition: background-color 0.2s ease-out;
+      background-color: var(--cardBg);
+      box-shadow: var(--cardBorderShadow);
+      transition: all 0.2s ease-out;
     }
   }
 
@@ -19,10 +20,11 @@
       }
     }
 
+    // Card
     .vertical-timeline-element-content {
       background-color: var(--cardBg);
-      box-shadow: 0 3px 0 var(--cardBorderShadow);
-      transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,;
+      box-shadow: var(--cardBorderShadow);
+      transition: all 0.2s ease-out;
     }
 
     .vertical-timeline-element-date {
@@ -39,9 +41,9 @@
     }
 
     .vertical-timeline-element-icon {
-      background-color: var(--cardCircleBg);
-      box-shadow: 0 0 0 4px var(--cardCircleBoxShadow), inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
-      transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out,;
+      background-color: var(--cardBg);
+      box-shadow: var(--cardBorderShadow);
+      transition: all 0.2s ease-out;
     }
 
     @media only screen and (max-width: 1170px) {

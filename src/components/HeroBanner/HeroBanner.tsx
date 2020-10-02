@@ -48,7 +48,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       {cta && ctaLink && (
         <Button
           style={{
-            backgroundColor: "var(--bg",
+            backgroundColor: "var(--cardBg",
           }}
           href={ctaLink}
           variant="contained"

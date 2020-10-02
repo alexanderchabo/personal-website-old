@@ -5,9 +5,10 @@
   --textNormal: #222;
   --textLink: #003cc8;
   --cardBg: rgb(223, 223, 223);
-  --cardBorderShadow: rgb(165, 165, 165);
-  -webkit-font-smoothing: antialiased;
 
+  // common
+  -webkit-font-smoothing: antialiased;
+  --cardBorderShadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
   --sidenavWidth: 20rem;
   --sidenavMargin: 2rem;
   --cardCircleBoxShadow: var(--cardBg);
@@ -17,12 +18,12 @@
 
 @media ( prefers-color-scheme: dark ) {
   :root {
+    --bg: #121212;
     --logoFilter: brightness(0) invert(1);
-    --bg: #000000;
-    --textNormal: rgba(255, 255, 255, 0.88);
+    --textNormal: #ffffff;
     --textLink: rgb(255, 167, 196);
-    --cardBg: #242323;
-    --cardBorderShadow: #363636;
+    --cardBg: rgba(255, 255, 255, 0.05);
+    ;
   }
 }
 
