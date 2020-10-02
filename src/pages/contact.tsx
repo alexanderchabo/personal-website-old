@@ -12,6 +12,7 @@ const Contact = () => (
         subTitle="Always happy to chat over a coffee or the world wide web"
         cta="Contact"
         ctaLink="mailto:alexander.chabo@gmail.com"
+        isFullHeight={true}
       />
     </section>
   </Layout>
