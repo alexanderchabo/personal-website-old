@@ -13,14 +13,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { isDesktop } = useDeviceType();
 
   return (
-  <div className={classNames(isDesktop && styles.addLeftMargin)}>
-    <Header />
-    <div>
-      <main>{children}</main>
-      <Footer />
+    <div className={classNames(isDesktop && styles.addLeftMargin)}>
+      <Header />
+      <div>
+        <main>{children}</main>
+        <Footer />
+      </div>
     </div>
-  </div>
-);
-  }
+  );
+};
 
 export default Layout;

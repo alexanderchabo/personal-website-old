@@ -12,25 +12,29 @@ const Header: React.FC = () => {
   const { isDesktop } = useDeviceType();
 
   return (
-    <header className={classNames(isDesktop && styles.fixToLeft)} >
-      <Headroom disableInlineStyles={true} disable={isDesktop} >
+    <header className={classNames(isDesktop && styles.fixToLeft)}>
+      <Headroom
+        disableInlineStyles={true}
+        disable={isDesktop}
+        className={styles.headroomWrapper}
+      >
         <div className={styles.header}>
           <h2 className={styles.h2}>
             <Link to="/">{"AC"}</Link>
           </h2>
+          <div className={styles.links}>
+            <Link to="/resume">Resume</Link>
+            <Link to="/contact">Contact</Link>
+          </div>
+          {isDesktop && (
+            <div className={styles.socialBar}>
+              {Object.values(social).map((key) => (
+                <SocialIcon key={key} className={styles.icon} url={key} />
+              ))}
+            </div>
+          )}
         </div>
       </Headroom>
-      {isDesktop && (
-      <div className={styles.socialBar}>
-          {Object.values(social).map(key => (
-            <SocialIcon
-              key={key}
-              className={styles.icon}
-              url={key}
-            />
-          ))}
-        </div>
-      )}
     </header>
   );
 };

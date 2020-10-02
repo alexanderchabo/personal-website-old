@@ -20,8 +20,12 @@
     z-index: 10;
     transition: background-color 0.2s ease-out, box-shadow 200ms ease-out;
     box-shadow: none;
-    @media (max-width: 1000px) {
-      padding: 1.5rem;
+    padding: 1.5rem;
+
+    @media (min-width: 1000px) {
+      padding: 0rem;
+      display: flex;
+      flex-grow: 1;
     }
   }
 
@@ -33,7 +37,7 @@
   .headroom--scrolled {
     transition: transform 200ms ease-out;
     background-color: var(--cardBg);
-    box-shadow: 0 1px 1px rgba(6, 8, 8, 0.1);
+    box-shadow: var(--cardBorderShadow);
   }
 
   .headroom--unpinned {
@@ -53,6 +57,17 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
+
+  a {
+    color: var(--textNormal) !important;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
   // a {
   //   transition: color 200ms ease-out;
@@ -64,11 +79,40 @@
   // }
 }
 
+.headroomWrapper {
+  @media (min-width: 1000px) {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+.links {
+  display: flex;
+
+  > a:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: column;
+    > a:not(:first-child) {
+      margin-left: 0;
+    }
+
+    > a:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 .h2 {
   margin: 0;
-  padding-right: 2rem;
   padding-left: 0.25rem;
   position: relative;
+
+  @media (min-width: 1000px) {
+    padding-left: 0.25rem;
+  }
 
   // Override active style color
   a {

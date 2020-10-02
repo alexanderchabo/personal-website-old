@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Helmet } from "react-helmet"
+import * as React from "react";
+import { Helmet } from "react-helmet";
 
 // Utils
-import useSiteMetadata from 'utils/useSiteMetadata';
+import useSiteMetadata from "utils/useSiteMetadata";
 
 interface SEOProps {
   description?: string;
@@ -15,9 +15,9 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  lang = 'en',
+  lang = "en",
   meta = [],
-  keywords = []
+  keywords = [],
 }) => {
   const siteMetadata = useSiteMetadata();
   const metaDescription = description || siteMetadata.description;
@@ -25,49 +25,49 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={title}
       titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: siteMetadata.author
+          content: siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription
-        }
+          content: metaDescription,
+        },
       ]
         .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `)
+                content: keywords.join(`, `),
               }
             : []
         )
