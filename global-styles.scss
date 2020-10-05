@@ -16,16 +16,16 @@
   --border: var(--cardBg);
 }
 
-@media ( prefers-color-scheme: dark ) {
-  :root {
-    --bg: #121212;
-    --logoFilter: brightness(0) invert(1);
-    --textNormal: #ffffff;
-    --textLink: rgb(255, 167, 196);
-    --cardBg: rgb(32, 32, 32);
-    ;
-  }
-}
+// @media ( prefers-color-scheme: dark ) {
+//   :root {
+//     --bg: #121212;
+//     --logoFilter: brightness(0) invert(1);
+//     --textNormal: #ffffff;
+//     --textLink: rgb(255, 167, 196);
+//     --cardBg: rgb(32, 32, 32);
+//     ;
+//   }
+// }
 
 body {
   background-color: var(--bg);
