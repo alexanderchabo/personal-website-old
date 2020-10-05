@@ -1,5 +1,6 @@
 .timeLineBugFix {
   width: 100% !important;
+  overflow: hidden;
 
   &:before {
     :global {

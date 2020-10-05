@@ -1,7 +1,7 @@
 .heroBanner {
   position: relative;
   transition: background-color 0.2s ease-out;
-  min-height: 50vh;
+  min-height: 30vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -9,7 +9,7 @@
   justify-content: center;
 
   &.fullHeight {
-    min-height: calc(100vh - 93px);
+    min-height: calc(100vh - 6rem);
 
     @media (min-width: 1000px) {
       min-height: 100vh;

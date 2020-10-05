@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import * as styles from "./HeroBanner.module.scss";
 import classnames from "classnames";
+import SocialBar from "../SocialBar/SocialBar";
 
 interface HeroBannerProps {
   title: string;
@@ -46,16 +47,21 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       <h1>{title}</h1>
       {subTitle && <p>{subTitle}</p>}
       {cta && ctaLink && (
-        <Button
-          style={{
-            backgroundColor: "var(--cardBg",
-          }}
-          href={ctaLink}
-          variant="contained"
-          className={classes.button}
-        >
-          {cta}
-        </Button>
+        <>
+          <Button
+            style={{
+              backgroundColor: "var(--cardBg",
+            }}
+            href={ctaLink}
+            variant="contained"
+            className={classes.button}
+          >
+            {cta}
+          </Button>
+          <div style={{ paddingTop: "3rem", marginLeft: "0.5rem" }}>
+            <SocialBar />
+          </div>
+        </>
       )}
     </div>
   );
