@@ -3,7 +3,7 @@ import theme from 'typography-theme-fairy-gates';
 
 theme.overrideThemeStyles = () => ({
   a: {
-    color: 'var(--textLink)',
+    color: 'var(--textNormal)',
     textShadow: 'none',
     backgroundImage: 'none'
   }
