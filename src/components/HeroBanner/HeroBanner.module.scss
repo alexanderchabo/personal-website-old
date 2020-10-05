@@ -1,7 +1,7 @@
 .heroBanner {
   position: relative;
   transition: background-color 0.2s ease-out;
-  min-height: 30vh;
+  min-height: 15rem;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -34,14 +34,20 @@
 
 .heroBannerBody {
   text-align: center;
-  max-width: 400px;
+  max-width: 800px;
 
   h1 {
     padding-left: 0.25rem;
+    margin: 0;
   }
 
-  h1,
-  p {
-    margin: 0;
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
   }
 }

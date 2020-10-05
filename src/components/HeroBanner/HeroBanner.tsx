@@ -12,7 +12,6 @@ interface HeroBannerProps {
   cta?: string;
   ctaLink?: string;
   isFullHeight?: boolean;
-  img?: any;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -30,7 +29,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   cta = "",
   ctaLink = "",
   isFullHeight = false,
-  img,
 }) => {
   const classes = useStyles({});
 
@@ -38,12 +36,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 
   const body = (
     <div className={styles.heroBannerBody}>
-      {img && (
-        <img
-          style={{ margin: "1rem", maxWidth: maxSize, maxHeight: maxSize }}
-          src={img}
-        />
-      )}
       <h1>{title}</h1>
       {subTitle && <p>{subTitle}</p>}
       {cta && ctaLink && (
