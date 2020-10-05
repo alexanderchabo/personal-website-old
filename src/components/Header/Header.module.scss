@@ -33,6 +33,14 @@ nav {
   @media (min-width: 1000px) {
     flex-direction: column;
 
+    > a {
+      font-size: 1.3rem;
+    }
+
+    > a:hover {
+      color: var(--textLink)
+    }
+
     > a:not(:first-child) {
       margin-left: 0;
     }
